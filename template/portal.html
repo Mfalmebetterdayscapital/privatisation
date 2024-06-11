@@ -1,0 +1,450 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Privatisation Authority</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Construction Company Website Template" name="keywords">
+    <meta content="Construction Company Website Template" name="description">
+
+    <!-- Favicon -->
+    <link href="{% static 'img/icon.png' %}" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="{% static 'lib/flaticon/font/flaticon.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/slick/slick.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/slick/slick-theme.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow sticky-top" style="height: 85px;">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="{% url 'index' %}">
+            <img src="{% static 'img/PA logo.png' %}" alt="Privatisation Authority Logo" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index' %}" style="color: #000000;">HOME</a>
+                </li>
+                
+              {% if user_id == None%}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}" style="color: #000000;">LOGIN</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logout' %}" style="color: #000000;">LOGOUT</a>
+                </li>
+                {% endif %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'register' %}" style="color: #000000;">REGISTER</a>
+                </li>
+               
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}" style="color: #000000;">CONTACT US</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<style>
+    /* Custom dropdown submenu styling */
+    .dropdown-submenu {
+        position: relative;
+        
+    }
+
+    .dropdown-submenu .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -1px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        display: none;
+        position: absolute;
+        background-color: #24702A; /* Same as other dropdowns */
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+    }
+
+    .dropdown-submenu:hover .dropdown-menu {
+        display: block;
+        background-color: #24702A;
+        
+    }
+
+    .dropdown-menu .dropdown-item {
+        color: #000; /* Same as other dropdown items */
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        display: block;
+        clear: both;
+        font-weight: 400;
+        line-height: 1.5;
+        white-space: nowrap;
+        background: 0 0;
+        border: 0;
+    }
+
+    .dropdown-menu .dropdown-item:hover, 
+    .dropdown-menu .dropdown-item:focus {
+        color: #16181b;
+        text-decoration: none;
+        background-color: rgba(0, 0, 0, 0.075);
+    }
+
+    .navbar-nav .dropdown:hover > .dropdown-menu {
+        display: block;
+        background-color: #24702A;
+    }
+
+    .navbar-nav .dropdown-menu .dropdown-item {
+        color: #ffffff;
+    }
+
+    .navbar-nav .dropdown-menu .dropdown-item:hover {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    .navbar-nav .dropdown-toggle::after {
+        content: none;
+    }
+
+    .nav-link {
+        position: relative;
+    }
+
+    .nav-link .fas {
+        margin-left: 5px;
+    }
+
+    .nav-item.dropdown:hover .nav-link {
+        color: #ffffff;
+        background-color: #24702A;
+    }
+
+
+    .navbar-brand .logo {
+        height: 120px;
+        margin-right: 10px;
+        margin-top: -5px;
+    }
+
+    /* Styles for laptops (typically between 1024px and 1440px wide) */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    /* Add your styles here */
+    .navbar-brand .logo {
+        height: 120px;
+        margin-right: 10px;
+        margin-top: -5px;
+    }
+}
+
+
+    @media (max-width: 991.98px) {
+        .navbar-collapse {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .navbar-brand .logo {
+            height: 120px;
+            margin-right: 10px;
+            margin-top: -35px;
+        }
+
+        .navbar-collapse.show {
+            display: block;
+        }
+
+        .navbar-nav {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .navbar-nav .nav-link {
+            margin: 10px 0;
+            text-align: left;
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .navbar-brand .logo {
+            height: 80px; /* Adjust logo height for small screens */
+            margin-top: -10px;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+
+        navbarToggler.addEventListener('click', function () {
+            navbarCollapse.classList.toggle('show');
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Handle hover for dropdown-submenu
+        document.querySelectorAll('.dropdown-submenu').forEach(function (element) {
+            element.addEventListener('mouseover', function () {
+                this.querySelector('.dropdown-menu').style.display = 'block';
+            });
+            element.addEventListener('mouseout', function () {
+                this.querySelector('.dropdown-menu').style.display = 'none';
+            });
+        });
+    });
+</script>
+
+<!-- Make sure to include Font Awesome for the dropdown icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+<style>
+    .container1 {
+        padding: 20px;
+    }
+    .card {
+        border: 1px solid #dee2e6;
+        border-radius: 10px; /* Added border radius */
+        padding: 20px; /* Added padding for inner content */
+    }
+    .card-header {
+        background-color: #f8f9fa;
+        font-weight: bold;
+        border-top-left-radius: 10px; /* Added border radius for top left corner */
+        border-top-right-radius: 10px; /* Added border radius for top right corner */
+        padding: 10px; /* Added padding for inner content */
+        margin-bottom: 20px; /* Added margin bottom for spacing */
+    }
+    .card-body {
+        background-color: #ffffff; /* Set background color */
+        padding: 20px; /* Added padding for inner content */
+    }
+    .table-responsive {
+        margin-top: 20px;
+    }
+    .table th, .table td {
+        text-align: center;
+    }
+    .no-results {
+        text-align: center;
+        font-style: italic;
+    }
+    @media (max-width: 768px) {
+        .container1 {
+            padding: 10px;
+        }
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .container1 {
+            padding: 15px;
+        }
+    }
+    /* Added styles for title and input fields */
+    .input-container {
+        border: 1px solid red;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 20px; /* Added margin bottom for spacing */
+    }
+</style>
+</head>
+<body>
+
+<div class="container1">
+<div class="card">
+    <h1 style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">PA Suppliers Portal</h1>
+    
+
+    <div class="card-body">
+        <p>Below is a listing of the available openings that you may be interested in. You will need to create an account in order to apply or download documents.</p>
+    </div>
+    {%if user_id == None%}
+    <div class="input-container">
+        <div class="card-header">
+            OPEN TENDERS <!-- Moved title inside card-header -->
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th>#</th>
+                        <th>No</th>
+                        <th>Title</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="5" class="no-results">No results found.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Input fields can be added here -->
+    </div>
+    {% else %}
+    
+    <div class="input-container">
+        <div class="card-header">
+            OPEN TENDERS <!-- Moved title inside card-header -->
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                      
+                        <th>NO</th>
+                        <th>Title</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for opening in positions%}
+                    <tr>
+                           
+                            <td>{{ opening.no }}</td>
+                            <td>{{ opening.title }}</td>
+                            <td>{{ opening.start_date }}</td>
+                            <td>{{ opening.end_date }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <!-- Input fields can be added here -->
+    </div>
+    {% endif %}
+   
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+
+
+<!-- Footer Start -->
+<div class="footer wow fadeIn" data-wow-delay="0.3s">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-3">
+                <div class="footer-contact">
+                    <h2>Office Contact</h2>
+                    <p><i class="fa fa-map-marker-alt"></i>10th Floor Social Security House - Annex, Nairobi, Kenya</p>
+                    <p><i class="fa fa-phone-alt"></i>020 8696 800</p>
+                    <p><i class="fa fa-envelope"></i>info@privatisation.go.ke</p>
+                    <div class="footer-social">
+                        <a href="https://x.com/privatizationke?lang=en"><i class="fab fa-twitter"></i></a>
+                        <a href="https://web.facebook.com/privatisationauthority"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/privatisationauthority/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/privatizationke/?originalSubdomain=ke"><i class="fab fa-linkedin-in"></i></a>
+                        
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="footer-link">
+                    <h2>Service Areas</h2>
+                    <a href="">Privatisation Programs</a>
+                    <a href="">Consultation Services</a>
+                    <a href="">Project Management</a>
+                    <a href="">Policy Development</a>
+                    <a href="">Research and Analysis</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="footer-link">
+                    <h2>Useful Pages</h2>
+                    <a href="mandate.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="board.html">Our Team</a>
+                    <a href="success.html">Projects</a>
+                   
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="newsletter">
+                    <h2>Newsletter</h2>
+                    <p>
+                        Stay updated with the latest news and developments from the Privatisation Authority. Subscribe to our newsletter.
+                    </p>
+                    <div class="form">
+                        <input class="form-control" placeholder="Email here">
+                        <button class="btn">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container footer-menu">
+        <div class="f-menu">
+            <a href="">Terms of Use</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Cookies</a>
+            <a href="">Help</a>
+            <a href="">FAQs</a>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/slick/slick.min.js"></script>
+
+        
+        <script src="js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+    </body>
+</html>

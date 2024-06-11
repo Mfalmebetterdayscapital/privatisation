@@ -1,0 +1,728 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Privatisation Authority</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Construction Company Website Template" name="keywords">
+    <meta content="Construction Company Website Template" name="description">
+
+    <!-- Favicon -->
+    <link href="{% static 'img/icon.png' %}" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="{% static 'lib/flaticon/font/flaticon.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/slick/slick.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/slick/slick-theme.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow sticky-top" style="height: 85px;">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="{% url 'index' %}">
+            <img src="{% static 'img/PA logo.png' %}" alt="Privatisation Authority Logo" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index' %}" style="color: #000000;">HOME</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="whoWeAreDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
+                        WHO WE ARE <i class="fas fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="whoWeAreDropdown">
+                        <li><a class="dropdown-item" href="{% url 'mandate' %}">Mandate</a></li>
+                        <li><a class="dropdown-item" href="{% url 'board' %}">Board Management</a></li>
+                        <li><a class="dropdown-item" href="{% url 'management' %}">Management Team</a></li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#" id="galleryDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Service Charter
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="galleryDropdown">
+                                <li><a class="dropdown-item" href="https://docs.google.com/document/d/1IYKCfYpKjZcjw05VRfSLD40UcgvbPj0m/edit?usp=sharing&ouid=106924956695957088139&rtpof=true&sd=true">Swahili Version</a></li>
+                                <li><a class="dropdown-item" href="https://docs.google.com/document/d/1GwNPc0jufACj_q53i6PoSyVdN-hsRsqU/edit?usp=sharing&ouid=106924956695957088139&rtpof=true&sd=true">English Version</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/PRIVATIZATION-COMMISSION-STRATEGIC-PLAN-2022.2027-1-1.pdf" target="_blank">Strategic Plan</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="privatisationDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
+                        PRIVATISATION <i class="fas fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="privatisationDropdown">
+                        <li><a class="dropdown-item" href="{% url 'success' %}">Success Stories</a></li>
+                        <li><a class="dropdown-item" href="{% url 'privatisation' %}">Privatisation Programme</a></li>
+                        <li><a class="dropdown-item" href="{% url 'entreprise' %}">Public Enterprises Reform</a></li>
+                        <li><a class="dropdown-item" href="{% url 'completed' %}">Completed Privatisations</a></li>
+                        <li><a class="dropdown-item" href="{% url 'act' %}">Privatisation Act</a></li>
+                        <li><a class="dropdown-item" href="{% url 'process' %}">Privatisation Process</a></li>
+                        <li><a class="dropdown-item" href="{% url 'benefits' %}">Benefits Of Privatisation</a></li>
+                        <li><a class="dropdown-item" href="{% url 'status' %}">Privatisation Programme Status</a></li>
+                        <li><a class="dropdown-item" href="{% url 'research' %}">Research</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="opportunitiesDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
+                        OPPORTUNITIES <i class="fas fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="opportunitiesDropdown">
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#" id="tendersDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Careers
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="tendersDropdown">
+                                <li><a class="dropdown-item" href="{% url 'vacancies' %}">Vacancies</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#" id="tendersDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Tenders
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="tendersDropdown">
+                                <li><a class="dropdown-item" href="{% url 'tenders' %}">Tenders</a></li>
+                                <li><a class="dropdown-item" href="{% url 'portal' %}">E-Procurement Portal</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#" id="tendersDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Investments
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="tendersDropdown">
+                                <li><a class="dropdown-item" href="{% url 'tenders' %}">Transactions Teaser</a></li>
+                                <li><a class="dropdown-item" href="{% url 'expressions' %}">Expressions Of interest (EOI)</a></li>
+                                <li><a class="dropdown-item" href="{% url 'proposal' %}">Request For Proposal (RFP)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="informationCentreDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
+                        INFORMATION CENTRE <i class="fas fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="informationCentreDropdown">
+                        <li><a class="dropdown-item" href="{% url 'news' %}">Our News</a></li>
+                        <li><a class="dropdown-item" href="{% url 'login' %}">Access To Information Center</a></li>
+                        <li><a class="dropdown-item" href="{% url 'act' %}">Privatisation Act</a></li>
+                        <li><a class="dropdown-item" href="{% url 'policy' %}">Anti-Corruption Policy</a></li>
+                        <li><a class="dropdown-item" href="{% url 'business' %}">Business Continuity Policy</a></li>
+                        <li><a class="dropdown-item" href="{% url 'mechanism' %}">Complaints Handling Mechanism</a></li>
+                        <li><a class="dropdown-item" href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/PC_QUALITY_POLICY-1.pdf">Quality Policy</a></li>
+                        <li><a class="dropdown-item" href="{% url 'csr' %}">Corporate Social Responsibility Policy</a></li>
+                        <li><a class="dropdown-item" href="{% url 'research' %}">Research</a></li>
+                        <li><a class="dropdown-item" href="{% url 'images' %}">Gallery</a></li>
+                        <li><a class="dropdown-item" href="{% url 'videos' %}">Videos</a></li>
+                        <li><a class="dropdown-item" href="#">Downloads</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}" style="color: #000000;">CONTACT US</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<style>
+    /* Custom dropdown submenu styling */
+    .dropdown-submenu {
+        position: relative;
+        
+    }
+
+    .dropdown-submenu .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -1px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        display: none;
+        position: absolute;
+        background-color: #24702A; /* Same as other dropdowns */
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+    }
+
+    .dropdown-submenu:hover .dropdown-menu {
+        display: block;
+        background-color: #24702A;
+        
+    }
+
+    .dropdown-menu .dropdown-item {
+        color: #000; /* Same as other dropdown items */
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        display: block;
+        clear: both;
+        font-weight: 400;
+        line-height: 1.5;
+        white-space: nowrap;
+        background: 0 0;
+        border: 0;
+    }
+
+    .dropdown-menu .dropdown-item:hover, 
+    .dropdown-menu .dropdown-item:focus {
+        color: #16181b;
+        text-decoration: none;
+        background-color: rgba(0, 0, 0, 0.075);
+    }
+
+    .navbar-nav .dropdown:hover > .dropdown-menu {
+        display: block;
+        background-color: #24702A;
+    }
+
+    .navbar-nav .dropdown-menu .dropdown-item {
+        color: #ffffff;
+    }
+
+    .navbar-nav .dropdown-menu .dropdown-item:hover {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    .navbar-nav .dropdown-toggle::after {
+        content: none;
+    }
+
+    .nav-link {
+        position: relative;
+    }
+
+    .nav-link .fas {
+        margin-left: 5px;
+    }
+
+    .nav-item.dropdown:hover .nav-link {
+        color: #ffffff;
+        background-color: #24702A;
+    }
+
+
+    .navbar-brand .logo {
+        height: 120px;
+        margin-right: 10px;
+        margin-top: -5px;
+    }
+
+    /* Styles for laptops (typically between 1024px and 1440px wide) */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    /* Add your styles here */
+    .navbar-brand .logo {
+        height: 120px;
+        margin-right: 10px;
+        margin-top: -5px;
+    }
+}
+
+
+    @media (max-width: 991.98px) {
+        .navbar-collapse {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .navbar-brand .logo {
+            height: 120px;
+            margin-right: 10px;
+            margin-top: -35px;
+        }
+
+        .navbar-collapse.show {
+            display: block;
+        }
+
+        .navbar-nav {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .navbar-nav .nav-link {
+            margin: 10px 0;
+            text-align: left;
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .navbar-brand .logo {
+            height: 80px; /* Adjust logo height for small screens */
+            margin-top: -10px;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+
+        navbarToggler.addEventListener('click', function () {
+            navbarCollapse.classList.toggle('show');
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Handle hover for dropdown-submenu
+        document.querySelectorAll('.dropdown-submenu').forEach(function (element) {
+            element.addEventListener('mouseover', function () {
+                this.querySelector('.dropdown-menu').style.display = 'block';
+            });
+            element.addEventListener('mouseout', function () {
+                this.querySelector('.dropdown-menu').style.display = 'none';
+            });
+        });
+    });
+</script>
+
+<!-- Make sure to include Font Awesome for the dropdown icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+          
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+        .title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+            text-decoration: underline;
+            color: #000000;
+        }
+        .collapsible {
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .collapsible::after {
+            content: '+';
+            font-size: 24px;
+            color: #ffffff;
+        }
+        .collapsible.active::after {
+            content: '-';
+        }
+        .content {
+            display: none;
+            padding: 0 18px;
+            overflow: hidden;
+            background-color: #f9f9f9;
+        }
+        .table-container {
+            width: 80%;
+            margin: 20px auto;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #E42130;
+            color: #ffffff;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        tr{
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">COMPLETED PRIVATISATIONS</div>
+    
+    <button class="collapsible" style="color: #ffffff; font-size:25px; background-color:#24702A; border-radius:15px; height:60px; ">2003 - 2008 <p>Click To View Table</p> </button>
+    <div class="content">
+        <div class="table-container">
+            <h2>RECEIVER</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Company</th>
+                        <th>Year</th>
+                        <th>Method of Privatization</th>
+                        <th>Public Share Before (%)</th>
+                        <th>Public Share After (%)</th>
+                        <th>Sector</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Kenya Electricity Generating Company</td>
+                        <td>2006</td>
+                        <td>IPO</td>
+                        <td>100</td>
+                        <td>70</td>
+                        <td>Energy</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Telkom Kenya</td>
+                        <td>2007</td>
+                        <td>Strategic Sale</td>
+                        <td>100</td>
+                        <td>49</td>
+                        <td>Telecommunication</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Kenya Railways Corporation</td>
+                        <td>2006</td>
+                        <td>Concessioning</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>Transport</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Mumias Sugar Company 2nd Offer</td>
+                        <td>2006</td>
+                        <td>IPO</td>
+                        <td>38.4</td>
+                        <td>20</td>
+                        <td>Manufacturing</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Safaricom</td>
+                        <td>2008</td>
+                        <td>IPO</td>
+                        <td>60</td>
+                        <td>35</td>
+                        <td>Telecommunication</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Kenya Reinsurance Corporation</td>
+                        <td>2007</td>
+                        <td>IPO</td>
+                        <td>100</td>
+                        <td>60</td>
+                        <td>Insurance</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <button class="collapsible" style="color: #ffffff; font-size:25px; background-color:#24702A; border-radius:10px; margin-top:10px;height:60px;">1992 - 2002 <p>Click To View Table</p></button>
+    <div class="content">
+        <div class="table-container">
+            <h2>B. RECEIVERSHIPS</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Company</th>
+                        <th>Year</th>
+                        <th>Public Share Before (%)</th>
+                        <th>Public Share After (%)</th>
+                        <th>Sector</th>
+                        <th>Buyer</th>
+                        <th>Proceed (Kshs)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Nairobi Oil Products Ltd</td>
+                        <td>1992</td>
+                        <td>29</td>
+                        <td>0</td>
+                        <td>Oil Recycling</td>
+                        <td>Various Individuals</td>
+                        <td>8,750,000</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Tiger Shoes Ltd</td>
+                        <td>1993</td>
+                        <td>16.7</td>
+                        <td>0</td>
+                        <td>Leather</td>
+                        <td>Lento Agencies Ltd</td>
+                        <td>9,000,000</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Yuken Textiles Ltd</td>
+                        <td>1993</td>
+                        <td>100</td>
+                        <td>0</td>
+                        <td>Textile</td>
+                        <td>Yuken Mills Ltd</td>
+                        <td>14,000,000</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Sirikwa Hotel Ltd</td>
+                        <td>1993</td>
+                        <td>21</td>
+                        <td>0</td>
+                        <td>Tourism</td>
+                        <td>Akamba Invest. Ltd</td>
+                        <td>70,000,000</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Kenya Drilling Co. ltd</td>
+                        <td>1993</td>
+                        <td>100</td>
+                        <td>0</td>
+                        <td>Services</td>
+                        <td>Kentco  Taxis Ltd</td>
+                        <td>21,700,000</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Kisumu Cotton Mills Ltd</td>
+                        <td>1993</td>
+                        <td>80</td>
+                        <td>0</td>
+                        <td>Textiles</td>
+                        <td>Caneland Ltd</td>
+                        <td>174,961,000</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Seracoating Kenya Ltd</td>
+                        <td>1994</td>
+                        <td>34</td>
+                        <td>0</td>
+                        <td>Plastic</td>
+                        <td>Local shareholders</td>
+                        <td>82,000,000</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Pan Vegetable Processors Ltd</td>
+                        <td>1993</td>
+                        <td>100</td>
+                        <td>0</td>
+                        <td>Agri-Processing</td>
+                        <td>Homegrown (K) Ltd</td>
+                        <td>95,000,000</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Kenya Taitex Mills Ltd</td>
+                        <td>1995</td>
+                        <td>81</td>
+                        <td>0</td>
+                        <td>Textiles</td>
+                        <td>Kifaru Mills Ltd</td>
+                        <td>81,000,000</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Kenya Furfural  Co. Ltd</td>
+                        <td>1995</td>
+                        <td>51</td>
+                        <td>0</td>
+                        <td>Chemical</td>
+                        <td>Various Shareholders</td>
+                        <td>55,800,000</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Kenya Engineering Industries Ltd</td>
+                        <td>1995</td>
+                        <td>50</td>
+                        <td>0</td>
+                        <td>Engineering</td>
+                        <td>Ashut Engineers Ltd</td>
+                        <td>52,505,555</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Synthetic Fibres Kenya Ltd</td>
+                        <td>1995</td>
+                        <td>100</td>
+                        <td>0</td>
+                        <td>Textile</td>
+                        <td>Sunrise Textile Mills Ltd</td>
+                        <td>50,000,000</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>East African Fine Spinners Ltd</td>
+                        <td>1995</td>
+                        <td>74</td>
+                        <td>0</td>
+                        <td>Textile</td>
+                        <td>Bedi Invest. Ltd</td>
+                        <td>282,000,000</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>Kenatco Taxis Ltd</td>
+                        <td>1996</td>
+                        <td>100</td>
+                        <td>0</td>
+                        <td>Transport</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>*This figure will increase by the value of Inventories.</p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+<!-- Footer Start -->
+<div class="footer wow fadeIn" data-wow-delay="0.3s">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-3">
+                <div class="footer-contact">
+                    <h2>Office Contact</h2>
+                    <p><i class="fa fa-map-marker-alt"></i>10th Floor Social Security House - Annex, Nairobi, Kenya</p>
+                    <p><i class="fa fa-phone-alt"></i>020 8696 800</p>
+                    <p><i class="fa fa-envelope"></i>info@privatisation.go.ke</p>
+                    <div class="footer-social">
+                        <a href="https://x.com/privatizationke?lang=en"><i class="fab fa-twitter"></i></a>
+                        <a href="https://web.facebook.com/privatisationauthority"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/privatisationauthority/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/privatizationke/?originalSubdomain=ke"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="footer-link">
+                    <h2>Service Areas</h2>
+                    <a href="">Privatisation Programs</a>
+                    <a href="">Consultation Services</a>
+                    <a href="">Project Management</a>
+                    <a href="">Policy Development</a>
+                    <a href="">Research and Analysis</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="footer-link">
+                    <h2>Useful Pages</h2>
+                    <a href="mandate.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="board.html">Our Team</a>
+                    <a href="success.html">Projects</a>
+                   
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="newsletter">
+                    <h2>Newsletter</h2>
+                    <p>
+                        Stay updated with the latest news and developments from the Privatisation Authority. Subscribe to our newsletter.
+                    </p>
+                    <div class="form">
+                        <input class="form-control" placeholder="Email here">
+                        <button class="btn">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container footer-menu">
+        <div class="f-menu">
+            <a href="">Terms of Use</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Cookies</a>
+            <a href="">Help</a>
+            <a href="">FAQs</a>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/slick/slick.min.js"></script>
+
+        
+        <script src="js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+    </body>
+</html>

@@ -1,0 +1,565 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Privatisation Authority</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Construction Company Website Template" name="keywords">
+    <meta content="Construction Company Website Template" name="description">
+
+    <!-- Favicon -->
+    <link href="{% static 'img/icon.png' %}" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="{% static 'lib/flaticon/font/flaticon.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/slick/slick.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/slick/slick-theme.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow sticky-top" style="height: 85px;">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="{% url 'index' %}">
+            <img src="{% static 'img/PA logo.png' %}" alt="Privatisation Authority Logo" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index' %}" style="color: #000000;">HOME</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="whoWeAreDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
+                        WHO WE ARE <i class="fas fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="whoWeAreDropdown">
+                        <li><a class="dropdown-item" href="{% url 'mandate' %}">Mandate</a></li>
+                        <li><a class="dropdown-item" href="{% url 'board' %}">Board Management</a></li>
+                        <li><a class="dropdown-item" href="{% url 'management' %}">Management Team</a></li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#" id="galleryDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Service Charter
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="galleryDropdown">
+                                <li><a class="dropdown-item" href="https://docs.google.com/document/d/1IYKCfYpKjZcjw05VRfSLD40UcgvbPj0m/edit?usp=sharing&ouid=106924956695957088139&rtpof=true&sd=true">Swahili Version</a></li>
+                                <li><a class="dropdown-item" href="https://docs.google.com/document/d/1GwNPc0jufACj_q53i6PoSyVdN-hsRsqU/edit?usp=sharing&ouid=106924956695957088139&rtpof=true&sd=true">English Version</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/PRIVATIZATION-COMMISSION-STRATEGIC-PLAN-2022.2027-1-1.pdf" target="_blank">Strategic Plan</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="privatisationDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
+                        PRIVATISATION <i class="fas fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="privatisationDropdown">
+                        <li><a class="dropdown-item" href="{% url 'success' %}">Success Stories</a></li>
+                        <li><a class="dropdown-item" href="{% url 'privatisation' %}">Privatisation Programme</a></li>
+                        <li><a class="dropdown-item" href="{% url 'entreprise' %}">Public Enterprises Reform</a></li>
+                        <li><a class="dropdown-item" href="{% url 'completed' %}">Completed Privatisations</a></li>
+                        <li><a class="dropdown-item" href="{% url 'act' %}">Privatisation Act</a></li>
+                        <li><a class="dropdown-item" href="{% url 'process' %}">Privatisation Process</a></li>
+                        <li><a class="dropdown-item" href="{% url 'benefits' %}">Benefits Of Privatisation</a></li>
+                        <li><a class="dropdown-item" href="{% url 'status' %}">Privatisation Programme Status</a></li>
+                        <li><a class="dropdown-item" href="{% url 'research' %}">Research</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="opportunitiesDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
+                        OPPORTUNITIES <i class="fas fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="opportunitiesDropdown">
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#" id="tendersDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Careers
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="tendersDropdown">
+                                <li><a class="dropdown-item" href="{% url 'vacancies' %}">Vacancies</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#" id="tendersDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Tenders
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="tendersDropdown">
+                                <li><a class="dropdown-item" href="{% url 'tenders' %}">Tenders</a></li>
+                                <li><a class="dropdown-item" href="{% url 'portal' %}">E-Procurement Portal</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#" id="tendersDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Investments
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="tendersDropdown">
+                                <li><a class="dropdown-item" href="{% url 'tenders' %}">Transactions Teaser</a></li>
+                                <li><a class="dropdown-item" href="{% url 'expressions' %}">Expressions Of interest (EOI)</a></li>
+                                <li><a class="dropdown-item" href="{% url 'proposal' %}">Request For Proposal (RFP)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="informationCentreDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
+                        INFORMATION CENTRE <i class="fas fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="informationCentreDropdown">
+                        <li><a class="dropdown-item" href="{% url 'news' %}">Our News</a></li>
+                        <li><a class="dropdown-item" href="{% url 'login' %}">Access To Information Center</a></li>
+                        <li><a class="dropdown-item" href="{% url 'act' %}">Privatisation Act</a></li>
+                        <li><a class="dropdown-item" href="{% url 'policy' %}">Anti-Corruption Policy</a></li>
+                        <li><a class="dropdown-item" href="{% url 'business' %}">Business Continuity Policy</a></li>
+                        <li><a class="dropdown-item" href="{% url 'mechanism' %}">Complaints Handling Mechanism</a></li>
+                        <li><a class="dropdown-item" href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/PC_QUALITY_POLICY-1.pdf">Quality Policy</a></li>
+                        <li><a class="dropdown-item" href="{% url 'csr' %}">Corporate Social Responsibility Policy</a></li>
+                        <li><a class="dropdown-item" href="{% url 'research' %}">Research</a></li>
+                        <li><a class="dropdown-item" href="{% url 'images' %}">Gallery</a></li>
+                        <li><a class="dropdown-item" href="{% url 'videos' %}">Videos</a></li>
+                        <li><a class="dropdown-item" href="#">Downloads</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}" style="color: #000000;">CONTACT US</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<style>
+    /* Custom dropdown submenu styling */
+    .dropdown-submenu {
+        position: relative;
+        
+    }
+
+    .dropdown-submenu .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -1px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        display: none;
+        position: absolute;
+        background-color: #24702A; /* Same as other dropdowns */
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+    }
+
+    .dropdown-submenu:hover .dropdown-menu {
+        display: block;
+        background-color: #24702A;
+        
+    }
+
+    .dropdown-menu .dropdown-item {
+        color: #000; /* Same as other dropdown items */
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        display: block;
+        clear: both;
+        font-weight: 400;
+        line-height: 1.5;
+        white-space: nowrap;
+        background: 0 0;
+        border: 0;
+    }
+
+    .dropdown-menu .dropdown-item:hover, 
+    .dropdown-menu .dropdown-item:focus {
+        color: #16181b;
+        text-decoration: none;
+        background-color: rgba(0, 0, 0, 0.075);
+    }
+
+    .navbar-nav .dropdown:hover > .dropdown-menu {
+        display: block;
+        background-color: #24702A;
+    }
+
+    .navbar-nav .dropdown-menu .dropdown-item {
+        color: #ffffff;
+    }
+
+    .navbar-nav .dropdown-menu .dropdown-item:hover {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    .navbar-nav .dropdown-toggle::after {
+        content: none;
+    }
+
+    .nav-link {
+        position: relative;
+    }
+
+    .nav-link .fas {
+        margin-left: 5px;
+    }
+
+    .nav-item.dropdown:hover .nav-link {
+        color: #ffffff;
+        background-color: #24702A;
+    }
+
+
+    .navbar-brand .logo {
+        height: 120px;
+        margin-right: 10px;
+        margin-top: -5px;
+    }
+
+    /* Styles for laptops (typically between 1024px and 1440px wide) */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    /* Add your styles here */
+    .navbar-brand .logo {
+        height: 120px;
+        margin-right: 10px;
+        margin-top: -5px;
+    }
+}
+
+
+    @media (max-width: 991.98px) {
+        .navbar-collapse {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .navbar-brand .logo {
+            height: 120px;
+            margin-right: 10px;
+            margin-top: -35px;
+        }
+
+        .navbar-collapse.show {
+            display: block;
+        }
+
+        .navbar-nav {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .navbar-nav .nav-link {
+            margin: 10px 0;
+            text-align: left;
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .navbar-brand .logo {
+            height: 80px; /* Adjust logo height for small screens */
+            margin-top: -10px;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+
+        navbarToggler.addEventListener('click', function () {
+            navbarCollapse.classList.toggle('show');
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Handle hover for dropdown-submenu
+        document.querySelectorAll('.dropdown-submenu').forEach(function (element) {
+            element.addEventListener('mouseover', function () {
+                this.querySelector('.dropdown-menu').style.display = 'block';
+            });
+            element.addEventListener('mouseout', function () {
+                this.querySelector('.dropdown-menu').style.display = 'none';
+            });
+        });
+    });
+</script>
+
+<!-- Make sure to include Font Awesome for the dropdown icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<style>
+    .container1 {
+        padding: 20px;
+    }
+    .card {
+        border: 1px solid #dee2e6;
+        border-radius: 10px; /* Added border radius */
+        padding: 20px; /* Added padding for inner content */
+    }
+    .card-header {
+        background-color: #f8f9fa;
+        font-weight: bold;
+        border-top-left-radius: 10px; /* Added border radius for top left corner */
+        border-top-right-radius: 10px; /* Added border radius for top right corner */
+        padding: 10px; /* Added padding for inner content */
+        margin-bottom: 20px; /* Added margin bottom for spacing */
+    }
+    .card-body {
+        background-color: #ffffff; /* Set background color */
+        padding: 20px; /* Added padding for inner content */
+    }
+    .table-responsive {
+        margin-top: 20px;
+    }
+    .table th, .table td {
+        text-align: center;
+    }
+    .no-results {
+        text-align: center;
+        font-style: italic;
+    }
+    @media (max-width: 768px) {
+        .container1 {
+            padding: 10px;
+        }
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .container1 {
+            padding: 15px;
+        }
+    }
+    /* Added styles for title and input fields */
+    .input-container {
+        border: 1px solid red;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 20px; /* Added margin bottom for spacing */
+    }
+</style>
+</head>
+<body>
+
+
+    <style>
+        .section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .company {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn {
+            background-color: #f00;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .content {
+            margin-top: 10px;
+        }
+
+        .content.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="company">
+            <h3>Kenya Wine Agencies (KWAL) Ltd.</h3>
+            <div class="details">
+                <div class="btn-container">
+                    <button class="btn" onclick="toggleContent('content1')">Objectives</button>
+                    <button class="btn" onclick="toggleContent('content2')">Status</button>
+                    <button class="btn" onclick="toggleContent('content3')">Contact</button>
+                </div>
+                <div id="content1" class="content">To ensure its continued viability; Bring a Strategic Partner on board to obviate pressure from current suppliers.</div>
+                <div id="content2" class="content hidden">Status details for Kenya Wine Agencies (KWAL) Ltd.</div>
+                <div id="content3" class="content hidden">Contact details for Kenya Wine Agencies (KWAL) Ltd.</div>
+            </div>
+        </div>
+        <div class="company">
+            <h3>Tourism Finance Corporation (TFC) Hotels</h3>
+            <div class="details">
+                <div class="btn-container">
+                    <button class="btn" onclick="toggleContent('content4')">Objectives</button>
+                    <button class="btn" onclick="toggleContent('content5')">Status</button>
+                    <button class="btn" onclick="toggleContent('content6')">Contact</button>
+                </div>
+                <div id="content4" class="content">To mobilize resources to rehabilitate and modernize existing facilities.</div>
+                <div id="content5" class="content hidden">Status details for Tourism Finance Corporation (TFC) Hotels.</div>
+                <div id="content6" class="content hidden">Contact details for Tourism Finance Corporation (TFC) Hotels.</div>
+            </div>
+        </div>
+        <div class="company">
+            <h3>Public Sector Owned/Controlled Sugar Companies</h3>
+            <div class="details">
+                <div class="btn-container">
+                    <button class="btn" onclick="toggleContent('content7')">Objectives</button>
+                    <button class="btn" onclick="toggleContent('content8')">Status</button>
+                    <button class="btn" onclick="toggleContent('content9')">Contact</button>
+                </div>
+                <div id="content7" class="content">To mobilize resources to rehabilitate and modernize sugar milling facilities to enhance their efficiency and competitiveness.</div>
+                <div id="content8" class="content hidden">Status details for Public Sector Owned/Controlled Sugar Companies.</div>
+                <div id="content9" class="content hidden">Contact details for Public Sector Owned/Controlled Sugar Companies.</div>
+            </div>
+        </div>
+        <div class="company">
+            <h3>National Bank of Kenya (NBK) Ltd</h3>
+            <div class="details">
+                <div class="btn-container">
+                    <button class="btn" onclick="toggleContent('content10')">Objectives</button>
+                    <button class="btn" onclick="toggleContent('content11')">Status</button>
+                    <button class="btn" onclick="toggleContent('content12')">Contact</button>
+                </div>
+                <div id="content10" class="content">To mobilize necessary resources to support the bank’s future growth, support the growth and stability of the financial sector.</div>
+                <div id="content11" class="content hidden">Status details for National Bank of Kenya (NBK) Ltd.</div>
+                <div id="content12" class="content hidden">Contact details for National Bank of Kenya (NBK) Ltd.</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleContent(id) {
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                if (content.id === id) {
+                    content.classList.toggle('hidden');
+                } else if (!content.classList.contains('hidden')) {
+                    content.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+
+
+
+
+    
+<!-- Footer Start -->
+<div class="footer wow fadeIn" data-wow-delay="0.3s">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-3">
+                <div class="footer-contact">
+                    <h2>Office Contact</h2>
+                    <p><i class="fa fa-map-marker-alt"></i>10th Floor Social Security House - Annex, Nairobi, Kenya</p>
+                    <p><i class="fa fa-phone-alt"></i>020 8696 800</p>
+                    <p><i class="fa fa-envelope"></i>info@privatisation.go.ke</p>
+                    <div class="footer-social">
+                        <a href="https://x.com/privatizationke?lang=en"><i class="fab fa-twitter"></i></a>
+                        <a href="https://web.facebook.com/privatisationauthority"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/privatisationauthority/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/privatizationke/?originalSubdomain=ke"><i class="fab fa-linkedin-in"></i></a>
+                        
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="footer-link">
+                    <h2>Service Areas</h2>
+                    <a href="">Privatisation Programs</a>
+                    <a href="">Consultation Services</a>
+                    <a href="">Project Management</a>
+                    <a href="">Policy Development</a>
+                    <a href="">Research and Analysis</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="footer-link">
+                    <h2>Useful Pages</h2>
+                    <a href="mandate.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="board.html">Our Team</a>
+                    <a href="success.html">Projects</a>
+                   
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="newsletter">
+                    <h2>Newsletter</h2>
+                    <p>
+                        Stay updated with the latest news and developments from the Privatisation Authority. Subscribe to our newsletter.
+                    </p>
+                    <div class="form">
+                        <input class="form-control" placeholder="Email here">
+                        <button class="btn">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container footer-menu">
+        <div class="f-menu">
+            <a href="">Terms of Use</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Cookies</a>
+            <a href="">Help</a>
+            <a href="">FAQs</a>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/slick/slick.min.js"></script>
+
+        
+        <script src="js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+    </body>
+</html>

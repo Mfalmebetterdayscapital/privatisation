@@ -1,0 +1,494 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Privatisation Authority</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Construction Company Website Template" name="keywords">
+    <meta content="Construction Company Website Template" name="description">
+
+    <!-- Favicon -->
+    <link href="{% static 'img/icon.png' %}" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="{% static 'lib/flaticon/font/flaticon.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/slick/slick.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/slick/slick-theme.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow sticky-top" style="height: 85px;">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="{% url 'index' %}">
+            <img src="{% static 'img/PA logo.png' %}" alt="Privatisation Authority Logo" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index' %}" style="color: #000000;">HOME</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="whoWeAreDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
+                        WHO WE ARE <i class="fas fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="whoWeAreDropdown">
+                        <li><a class="dropdown-item" href="{% url 'mandate' %}">Mandate</a></li>
+                        <li><a class="dropdown-item" href="{% url 'board' %}">Board Management</a></li>
+                        <li><a class="dropdown-item" href="{% url 'management' %}">Management Team</a></li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#" id="galleryDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Service Charter
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="galleryDropdown">
+                                <li><a class="dropdown-item" href="https://docs.google.com/document/d/1IYKCfYpKjZcjw05VRfSLD40UcgvbPj0m/edit?usp=sharing&ouid=106924956695957088139&rtpof=true&sd=true">Swahili Version</a></li>
+                                <li><a class="dropdown-item" href="https://docs.google.com/document/d/1GwNPc0jufACj_q53i6PoSyVdN-hsRsqU/edit?usp=sharing&ouid=106924956695957088139&rtpof=true&sd=true">English Version</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/PRIVATIZATION-COMMISSION-STRATEGIC-PLAN-2022.2027-1-1.pdf" target="_blank">Strategic Plan</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="privatisationDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
+                        PRIVATISATION <i class="fas fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="privatisationDropdown">
+                        <li><a class="dropdown-item" href="{% url 'success' %}">Success Stories</a></li>
+                        <li><a class="dropdown-item" href="{% url 'privatisation' %}">Privatisation Programme</a></li>
+                        <li><a class="dropdown-item" href="{% url 'entreprise' %}">Public Enterprises Reform</a></li>
+                        <li><a class="dropdown-item" href="{% url 'completed' %}">Completed Privatisations</a></li>
+                        <li><a class="dropdown-item" href="{% url 'act' %}">Privatisation Act</a></li>
+                        <li><a class="dropdown-item" href="{% url 'process' %}">Privatisation Process</a></li>
+                        <li><a class="dropdown-item" href="{% url 'benefits' %}">Benefits Of Privatisation</a></li>
+                        <li><a class="dropdown-item" href="{% url 'status' %}">Privatisation Programme Status</a></li>
+                        <li><a class="dropdown-item" href="{% url 'research' %}">Research</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="opportunitiesDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
+                        OPPORTUNITIES <i class="fas fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="opportunitiesDropdown">
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#" id="tendersDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Careers
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="tendersDropdown">
+                                <li><a class="dropdown-item" href="{% url 'vacancies' %}">Vacancies</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#" id="tendersDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Tenders
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="tendersDropdown">
+                                <li><a class="dropdown-item" href="{% url 'tenders' %}">Tenders</a></li>
+                                <li><a class="dropdown-item" href="{% url 'portal' %}">E-Procurement Portal</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#" id="tendersDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Investments
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="tendersDropdown">
+                                <li><a class="dropdown-item" href="{% url 'tenders' %}">Transactions Teaser</a></li>
+                                <li><a class="dropdown-item" href="{% url 'expressions' %}">Expressions Of interest (EOI)</a></li>
+                                <li><a class="dropdown-item" href="{% url 'proposal' %}">Request For Proposal (RFP)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="informationCentreDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
+                        INFORMATION CENTRE <i class="fas fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="informationCentreDropdown">
+                        <li><a class="dropdown-item" href="{% url 'news' %}">Our News</a></li>
+                        <li><a class="dropdown-item" href="{% url 'login' %}">Access To Information Center</a></li>
+                        <li><a class="dropdown-item" href="{% url 'act' %}">Privatisation Act</a></li>
+                        <li><a class="dropdown-item" href="{% url 'policy' %}">Anti-Corruption Policy</a></li>
+                        <li><a class="dropdown-item" href="{% url 'business' %}">Business Continuity Policy</a></li>
+                        <li><a class="dropdown-item" href="{% url 'mechanism' %}">Complaints Handling Mechanism</a></li>
+                        <li><a class="dropdown-item" href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/PC_QUALITY_POLICY-1.pdf">Quality Policy</a></li>
+                        <li><a class="dropdown-item" href="{% url 'csr' %}">Corporate Social Responsibility Policy</a></li>
+                        <li><a class="dropdown-item" href="{% url 'research' %}">Research</a></li>
+                        <li><a class="dropdown-item" href="{% url 'images' %}">Gallery</a></li>
+                        <li><a class="dropdown-item" href="{% url 'videos' %}">Videos</a></li>
+                        <li><a class="dropdown-item" href="#">Downloads</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}" style="color: #000000;">CONTACT US</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<style>
+    /* Custom dropdown submenu styling */
+    .dropdown-submenu {
+        position: relative;
+        
+    }
+
+    .dropdown-submenu .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -1px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        display: none;
+        position: absolute;
+        background-color: #24702A; /* Same as other dropdowns */
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+    }
+
+    .dropdown-submenu:hover .dropdown-menu {
+        display: block;
+        background-color: #24702A;
+        
+    }
+
+    .dropdown-menu .dropdown-item {
+        color: #000; /* Same as other dropdown items */
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        display: block;
+        clear: both;
+        font-weight: 400;
+        line-height: 1.5;
+        white-space: nowrap;
+        background: 0 0;
+        border: 0;
+    }
+
+    .dropdown-menu .dropdown-item:hover, 
+    .dropdown-menu .dropdown-item:focus {
+        color: #16181b;
+        text-decoration: none;
+        background-color: rgba(0, 0, 0, 0.075);
+    }
+
+    .navbar-nav .dropdown:hover > .dropdown-menu {
+        display: block;
+        background-color: #24702A;
+    }
+
+    .navbar-nav .dropdown-menu .dropdown-item {
+        color: #ffffff;
+    }
+
+    .navbar-nav .dropdown-menu .dropdown-item:hover {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    .navbar-nav .dropdown-toggle::after {
+        content: none;
+    }
+
+    .nav-link {
+        position: relative;
+    }
+
+    .nav-link .fas {
+        margin-left: 5px;
+    }
+
+    .nav-item.dropdown:hover .nav-link {
+        color: #ffffff;
+        background-color: #24702A;
+    }
+
+
+    .navbar-brand .logo {
+        height: 120px;
+        margin-right: 10px;
+        margin-top: -5px;
+    }
+
+    /* Styles for laptops (typically between 1024px and 1440px wide) */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    /* Add your styles here */
+    .navbar-brand .logo {
+        height: 120px;
+        margin-right: 10px;
+        margin-top: -5px;
+    }
+}
+
+
+    @media (max-width: 991.98px) {
+        .navbar-collapse {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .navbar-brand .logo {
+            height: 120px;
+            margin-right: 10px;
+            margin-top: -35px;
+        }
+
+        .navbar-collapse.show {
+            display: block;
+        }
+
+        .navbar-nav {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .navbar-nav .nav-link {
+            margin: 10px 0;
+            text-align: left;
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .navbar-brand .logo {
+            height: 80px; /* Adjust logo height for small screens */
+            margin-top: -10px;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+
+        navbarToggler.addEventListener('click', function () {
+            navbarCollapse.classList.toggle('show');
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Handle hover for dropdown-submenu
+        document.querySelectorAll('.dropdown-submenu').forEach(function (element) {
+            element.addEventListener('mouseover', function () {
+                this.querySelector('.dropdown-menu').style.display = 'block';
+            });
+            element.addEventListener('mouseout', function () {
+                this.querySelector('.dropdown-menu').style.display = 'none';
+            });
+        });
+    });
+</script>
+
+<!-- Make sure to include Font Awesome for the dropdown icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        
+<style>
+    .container1 {
+        width: 95%; /* Adjust the width as needed */
+        margin: 50px auto; /* Center the container */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+        overflow: hidden; /* Prevents shadow from overflowing */
+        padding: 20px; /* Padding inside the container */
+         /* Background color for better readability */
+        color: #000000;
+    }
+
+    .title {
+        text-align: center;
+        text-decoration: underline;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .abstract {
+        margin-bottom: 20px;
+    }
+
+    a {
+        color: #000000;
+        
+    }
+
+    .section {
+        margin-bottom: 40px; /* Spacing between sections */
+    }
+</style>
+</head>
+<body>
+
+<div class="container1">
+    <div class="section">
+        <h2 class="title">Comparative Analysis of Privatisation and Government Divestiture: Challenges and Opportunities</h2>
+        <p class="abstract">
+            The main aim of the analysis was to glean and borrow beneficial privatisation practices from nine selected countries across the world with the intention of availing the gathered information for purposes of the Privatisation Commission learning and improvement. The study explored various theoretical frameworks of privatisation to broaden the understanding of the concept of privatisation. Both cross-sectional and longitudinal study designs were used in this research. Cross section was used to study the practice of privatisation across nine select countries as compared to Kenya. Longitudinal design was used to trace the history, practice and outcome of privatisation in the focus countries of study from the end of World War II to date. The study focused on the US, United Kingdom, Brazil, China, India, Japan, South Africa, Nigeria, and Ghana. Secondary data obtained from literature review was used. Content analysis was done on data collected and presented in narratives and discussions.
+        </p>
+        <p class="abstract">
+            In analyzing the privatisation practices among the countries targeted, eight important variables were used as measures of comparison: objectives of privatisation in each country, history of privatisation, privatisations undertaken, methods of privatisation, processes of privatisation, legal environment of privatisation, challenges of privatisation and privatisation lessons learned from each country under study. The study found out that privatisation is a wave of economic policy that took root in the 1970s starting with the United Kingdom. It came as a result of the realization that governments were not efficient in managing state enterprises due to various reasons and that private individuals who pursue profit motive would be more committed towards the success of enterprises under their ownership. Privatisation was also driven by the assumption that in a perfect market, competition would yield more benefit to the consuming public.
+        </p>
+        <p class="abstract">
+            There are mixed results to the economic policy of privatisation across the world and in individual countries. In some instances, it has produced the desired results, but in some cases, it has failed. Across the studied countries, it was observed that the success or failure of privatisation depended on economic sectors and cultural factors. Each case was however unique to each country. The key determining factors in the success or failure of privatisation seems to rely heavily on the culture of the society in which it is practiced as manifested through governance practices. Privatisation seems to have done well in civilized communities where the well-being of the society is put above those of individuals as opposed to situations where the selfish interest of individuals is allowed to take root. The study ends with a summary of challenges and specific recommendations.
+        </p>
+        <p class="abstract">
+            <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/Research-Report.pdf" target="_blank">Click here to download the Report</a>
+        </p>
+    </div>
+
+    <div class="section">
+        <h2 class="title">Enhancement of Corporate Governance through Privatisation</h2>
+        <p class="abstract">
+            The convergence of global economies towards market-based systems has put the modern corporation in the centre of economies around the world. It is becoming increasingly recognized that companies should be managed to reflect the interests of society at large rather than for purely private interests. The positive and negative externalities of the separation of management and ownership in the modern corporation makes corporate governance an important issue. This leads to a number of issues related to efficient control of the assets of corporations in the interest of all stakeholders. Corporate governance is also important for state-owned enterprises (SOEs).
+        </p>
+        <p class="abstract">
+            <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/ENHANCEMENT-OF-CORPORATE-GOVERNANCE-THROUGH-PRIVATIZATION.pdf" target="_blank">Click to download document</a>
+        </p>
+    </div>
+
+    <div class="section">
+        <h2 class="title">Dealing with Resistance to Privatisation</h2>
+        <p class="abstract">
+            As the Privatisation Commission executes its mandate of formulating, managing and implementing the Privatisation Programme, it is likely to encounter resistance from different stakeholders. This is not unique to Kenya as every country that has pursued privatisation as a Government policy has had to deal with resistance to privatisation at one time or the other. A survey carried out by the Center for Global Development in 2002, concluded that “privatisation remains widely unpopular, largely because of the perception that it is fundamentally unfair, both in conception and execution”.
+        </p>
+        <p class="abstract">
+            Opposition to privatisation can come from different stakeholders and groups that include trade unions – including workers and management, consumers, professionals, environmentalists, political groupings and politicians, and community organizations. Resistance to privatisation has taken place in countries at varying levels of national incomes so that the resistance to privatisation is not limited to developing countries.
+        </p>
+        <p class="abstract">
+            Resistance has the potential to delay, dilute or sabotage public enterprise reform in general and privatisation in particular (Nellis, 2003). Despite the resistance, the economic benefits associated with privatisation are widely accepted and can include: improving enterprise efficiency and performance; developing competitive industry which serves consumers well; accessing the capital, know-how and markets which permit growth; achieving effective corporate governance, broadening and deepening capital markets and securing best price possible for the sale.
+        </p>
+        <p class="abstract">
+            In light of the above, this paper seeks to identify the possible reasons for resistance to privatisation and the mitigation measures that can be put in place to deal with the resistance.
+        </p>
+        <p class="abstract">
+            The specific objectives of the paper are: identifying the benefits associated with privatisation based on numerous studies that have been conducted; identifying possible reasons for stakeholder resistance to privatisation; identifying some of the mitigation measure that can be put in place to deal with resistance to privatisations; and proposing recommendations on how to mitigate possible resistance as the Privatisation Commission implements the Privatisation Programme. The paper has extensively reviewed literature on privatisation most of which has been downloaded from the internet.
+        </p>
+        <p class="abstract">
+            Recommendations from the paper include:
+            <ul>
+                <li>Need for a communication strategy for the Privatisation Programme through which stakeholder expectations for privatisation can be managed.</li>
+                <li>Need for enhanced stakeholder consultations during the design of the Privatisation Programme and prior to and during the entire process of implementing privatisation transactions.</li>
+                <li>Inclusion of employee ownership schemes in the privatisation proposals to offer interested employees an ownership in privatised enterprise.</li>
+                <li>Publicizing major activities can enhance public acceptance.</li>
+                <li>The proposed methods of privatisation could as much as possible encourage broad based ownership to gain public and political support.</li>
+                <li>There may be need to ensure that the Commission is underpinned by a strong law that empowers it to overcome opposition from vested interests – this may call for strict enforcement of the existing law or amendment. Such a law could accord the Commission administrative authority that requires entities to be privatised and government ministries to comply with its requirements.</li>
+                <li>The Commission may consider developing a mechanism to monitor institutions post-privatisation that will provide feedback on closed transactions – this will build stakeholder confidence and marshal support to ongoing privatisations.</li>
+                <li>Government may be encouraged to plough back privatisation proceeds into social infrastructure such as hospitals and schools to build public support for privatisation.</li>
+            </ul>
+        </p>
+        <p class="abstract">
+            <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/DEALING-WITH-RESISTANCE-TO-PRIVATIZATION-1.pdf" target="_blank">Click here to download documentation on dealing with resistance to privatisation</a>
+        </p>
+    </div>
+</div>
+
+<!-- Footer Start -->
+<div class="footer wow fadeIn" data-wow-delay="0.3s">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-3">
+                <div class="footer-contact">
+                    <h2>Office Contact</h2>
+                    <p><i class="fa fa-map-marker-alt"></i>10th Floor Social Security House - Annex, Nairobi, Kenya</p>
+                    <p><i class="fa fa-phone-alt"></i>020 8696 800</p>
+                    <p><i class="fa fa-envelope"></i>info@privatisation.go.ke</p>
+                    <div class="footer-social">
+                        <a href="https://x.com/privatizationke?lang=en"><i class="fab fa-twitter"></i></a>
+                        <a href="https://web.facebook.com/privatisationauthority"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/privatisationauthority/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/privatizationke/?originalSubdomain=ke"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="footer-link">
+                    <h2>Service Areas</h2>
+                    <a href="">Privatisation Programs</a>
+                    <a href="">Consultation Services</a>
+                    <a href="">Project Management</a>
+                    <a href="">Policy Development</a>
+                    <a href="">Research and Analysis</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="footer-link">
+                    <h2>Useful Pages</h2>
+                    <a href="mandate.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="board.html">Our Team</a>
+                    <a href="success.html">Projects</a>
+                   
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="newsletter">
+                    <h2>Newsletter</h2>
+                    <p>
+                        Stay updated with the latest news and developments from the Privatisation Authority. Subscribe to our newsletter.
+                    </p>
+                    <div class="form">
+                        <input class="form-control" placeholder="Email here">
+                        <button class="btn">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container footer-menu">
+        <div class="f-menu">
+            <a href="">Terms of Use</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Cookies</a>
+            <a href="">Help</a>
+            <a href="">FAQs</a>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/slick/slick.min.js"></script>
+
+        
+        <script src="js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+    </body>
+</html>

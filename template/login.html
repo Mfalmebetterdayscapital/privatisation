@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Privatisation Authority</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000; /* Ensure the navbar is on top of other elements */
+        }
+        .navbar-brand img {
+            height: 120px; /* Adjust logo height */
+            margin-right: 10px; /* Optional margin for logo */
+        }
+        .navbar-toggler {
+            border: none;
+        }
+        .navbar-collapse {
+            justify-content: flex-end;
+        }
+        .navbar-nav .nav-link {
+            color: #333;
+            margin-left: 15px; /* Adjust spacing between nav items */
+        }
+        .login-container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Center the login form vertically and horizontally */
+            margin-top: 50px; /* Adjust the margin from the top */
+        }
+        .login-container h2 {
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .login-container .btn-primary {
+            background-color: #24702A;
+            border: none;
+        }
+        .input-group-append {
+            cursor: pointer;
+        }
+
+        @media (max-width: 991.98px) {
+            .navbar-brand img {
+                height: 50px; /* Adjust logo height for smaller screens */
+                margin-top: -30px; /* Add margin to the top of the logo */
+            }
+        }
+    </style>
+</head>
+<body>
+
+ 
+     
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+    
+            navbarToggler.addEventListener('click', function () {
+                navbarCollapse.classList.toggle('show');
+            });
+        });
+    </script>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="/auth_login/" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <div class="input-group">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" required>
+                    <div class="input-group-append">
+                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-group">
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+                    <div class="input-group-append">
+                        <span class="input-group-text toggle-password"><i class="fas fa-eye"></i></span>
+                    </div>
+                </div>
+            </div>
+            <a href="/register/">To create account click here </a>
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+    </div>
+
+    <script>
+        document.querySelector('.toggle-password').addEventListener('click', function() {
+            const passwordInput = document.getElementById('password');
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            this.querySelector('i').classList.toggle('fa-eye-slash');
+        });
+    </script>
+</body>
+</html>
+

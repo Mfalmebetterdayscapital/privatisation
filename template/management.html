@@ -1,0 +1,655 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Privatisation Authority</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Construction Company Website Template" name="keywords">
+    <meta content="Construction Company Website Template" name="description">
+
+    <!-- Favicon -->
+    <link href="{% static 'img/icon.png' %}" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="{% static 'lib/flaticon/font/flaticon.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/slick/slick.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/slick/slick-theme.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow sticky-top" style="height: 85px;">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="{% url 'index' %}">
+            <img src="{% static 'img/PA logo.png' %}" alt="Privatisation Authority Logo" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index' %}" style="color: #000000;">HOME</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="whoWeAreDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
+                        WHO WE ARE <i class="fas fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="whoWeAreDropdown">
+                        <li><a class="dropdown-item" href="{% url 'mandate' %}">Mandate</a></li>
+                        <li><a class="dropdown-item" href="{% url 'board' %}">Board Management</a></li>
+                        <li><a class="dropdown-item" href="{% url 'management' %}">Management Team</a></li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#" id="galleryDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Service Charter
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="galleryDropdown">
+                                <li><a class="dropdown-item" href="https://docs.google.com/document/d/1IYKCfYpKjZcjw05VRfSLD40UcgvbPj0m/edit?usp=sharing&ouid=106924956695957088139&rtpof=true&sd=true">Swahili Version</a></li>
+                                <li><a class="dropdown-item" href="https://docs.google.com/document/d/1GwNPc0jufACj_q53i6PoSyVdN-hsRsqU/edit?usp=sharing&ouid=106924956695957088139&rtpof=true&sd=true">English Version</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/PRIVATIZATION-COMMISSION-STRATEGIC-PLAN-2022.2027-1-1.pdf" target="_blank">Strategic Plan</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="privatisationDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
+                        PRIVATISATION <i class="fas fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="privatisationDropdown">
+                        <li><a class="dropdown-item" href="{% url 'success' %}">Success Stories</a></li>
+                        <li><a class="dropdown-item" href="{% url 'privatisation' %}">Privatisation Programme</a></li>
+                        <li><a class="dropdown-item" href="{% url 'entreprise' %}">Public Enterprises Reform</a></li>
+                        <li><a class="dropdown-item" href="{% url 'completed' %}">Completed Privatisations</a></li>
+                        <li><a class="dropdown-item" href="{% url 'act' %}">Privatisation Act</a></li>
+                        <li><a class="dropdown-item" href="{% url 'process' %}">Privatisation Process</a></li>
+                        <li><a class="dropdown-item" href="{% url 'benefits' %}">Benefits Of Privatisation</a></li>
+                        <li><a class="dropdown-item" href="{% url 'status' %}">Privatisation Programme Status</a></li>
+                        <li><a class="dropdown-item" href="{% url 'research' %}">Research</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="opportunitiesDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
+                        OPPORTUNITIES <i class="fas fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="opportunitiesDropdown">
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#" id="tendersDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Careers
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="tendersDropdown">
+                                <li><a class="dropdown-item" href="{% url 'vacancies' %}">Vacancies</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#" id="tendersDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Tenders
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="tendersDropdown">
+                                <li><a class="dropdown-item" href="{% url 'tenders' %}">Tenders</a></li>
+                                <li><a class="dropdown-item" href="{% url 'portal' %}">E-Procurement Portal</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#" id="tendersDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Investments
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="tendersDropdown">
+                                <li><a class="dropdown-item" href="{% url 'tenders' %}">Transactions Teaser</a></li>
+                                <li><a class="dropdown-item" href="{% url 'expressions' %}">Expressions Of interest (EOI)</a></li>
+                                <li><a class="dropdown-item" href="{% url 'proposal' %}">Request For Proposal (RFP)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="informationCentreDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
+                        INFORMATION CENTRE <i class="fas fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="informationCentreDropdown">
+                        <li><a class="dropdown-item" href="{% url 'news' %}">Our News</a></li>
+                        <li><a class="dropdown-item" href="{% url 'login' %}">Access To Information Center</a></li>
+                        <li><a class="dropdown-item" href="{% url 'act' %}">Privatisation Act</a></li>
+                        <li><a class="dropdown-item" href="{% url 'policy' %}">Anti-Corruption Policy</a></li>
+                        <li><a class="dropdown-item" href="{% url 'business' %}">Business Continuity Policy</a></li>
+                        <li><a class="dropdown-item" href="{% url 'mechanism' %}">Complaints Handling Mechanism</a></li>
+                        <li><a class="dropdown-item" href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/PC_QUALITY_POLICY-1.pdf">Quality Policy</a></li>
+                        <li><a class="dropdown-item" href="{% url 'csr' %}">Corporate Social Responsibility Policy</a></li>
+                        <li><a class="dropdown-item" href="{% url 'research' %}">Research</a></li>
+                        <li><a class="dropdown-item" href="{% url 'images' %}">Gallery</a></li>
+                        <li><a class="dropdown-item" href="{% url 'videos' %}">Videos</a></li>
+                        <li><a class="dropdown-item" href="#">Downloads</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}" style="color: #000000;">CONTACT US</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<style>
+    /* Custom dropdown submenu styling */
+    .dropdown-submenu {
+        position: relative;
+        
+    }
+
+    .dropdown-submenu .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -1px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        display: none;
+        position: absolute;
+        background-color: #24702A; /* Same as other dropdowns */
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+    }
+
+    .dropdown-submenu:hover .dropdown-menu {
+        display: block;
+        background-color: #24702A;
+        
+    }
+
+    .dropdown-menu .dropdown-item {
+        color: #000; /* Same as other dropdown items */
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        display: block;
+        clear: both;
+        font-weight: 400;
+        line-height: 1.5;
+        white-space: nowrap;
+        background: 0 0;
+        border: 0;
+    }
+
+    .dropdown-menu .dropdown-item:hover, 
+    .dropdown-menu .dropdown-item:focus {
+        color: #16181b;
+        text-decoration: none;
+        background-color: rgba(0, 0, 0, 0.075);
+    }
+
+    .navbar-nav .dropdown:hover > .dropdown-menu {
+        display: block;
+        background-color: #24702A;
+    }
+
+    .navbar-nav .dropdown-menu .dropdown-item {
+        color: #ffffff;
+    }
+
+    .navbar-nav .dropdown-menu .dropdown-item:hover {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    .navbar-nav .dropdown-toggle::after {
+        content: none;
+    }
+
+    .nav-link {
+        position: relative;
+    }
+
+    .nav-link .fas {
+        margin-left: 5px;
+    }
+
+    .nav-item.dropdown:hover .nav-link {
+        color: #ffffff;
+        background-color: #24702A;
+    }
+
+
+    .navbar-brand .logo {
+        height: 120px;
+        margin-right: 10px;
+        margin-top: -5px;
+    }
+
+    /* Styles for laptops (typically between 1024px and 1440px wide) */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    /* Add your styles here */
+    .navbar-brand .logo {
+        height: 120px;
+        margin-right: 10px;
+        margin-top: -5px;
+    }
+}
+
+
+    @media (max-width: 991.98px) {
+        .navbar-collapse {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .navbar-brand .logo {
+            height: 120px;
+            margin-right: 10px;
+            margin-top: -35px;
+        }
+
+        .navbar-collapse.show {
+            display: block;
+        }
+
+        .navbar-nav {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .navbar-nav .nav-link {
+            margin: 10px 0;
+            text-align: left;
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .navbar-brand .logo {
+            height: 80px; /* Adjust logo height for small screens */
+            margin-top: -10px;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+
+        navbarToggler.addEventListener('click', function () {
+            navbarCollapse.classList.toggle('show');
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Handle hover for dropdown-submenu
+        document.querySelectorAll('.dropdown-submenu').forEach(function (element) {
+            element.addEventListener('mouseover', function () {
+                this.querySelector('.dropdown-menu').style.display = 'block';
+            });
+            element.addEventListener('mouseout', function () {
+                this.querySelector('.dropdown-menu').style.display = 'none';
+            });
+        });
+    });
+</script>
+
+<!-- Make sure to include Font Awesome for the dropdown icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<style>
+    body {
+        
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+    }
+
+    .team {
+        padding: 50px 0;
+    }
+
+    .section-header {
+        margin-bottom: 50px;
+    }
+
+    .section-header p {
+        margin: 0;
+        font-size: 24px;
+        color: #24702A;
+    }
+
+    .section-header h2 {
+        margin: 10px 0;
+        font-size: 32px;
+    }
+
+    .team-item {
+        text-align: center;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+
+    .team-img {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        border: 5px solid #24702A;
+    }
+
+    .team-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .team-text {
+        margin-top: 15px;
+    }
+
+    .team-text h2 {
+        font-size: 20px;
+        color: #ffffff;
+    }
+
+    .team-text p {
+        font-size: 16px;
+        color: #ffffff;
+    }
+
+    .view-profile-btn {
+        background-color: #E42130;
+        color: #ffffff;
+        border: none;
+        padding: 2.5px 5px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .view-profile-btn:hover {
+        background-color: #d1182b;
+    }
+
+    .team-social {
+        margin-top: 15px;
+    }
+
+    .team-social a {
+        margin: 0 5px;
+        color: #666;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .team-social a:hover {
+        color: #24702A;
+    }
+
+    @media (max-width: 768px) {
+        .team-item {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .team-img {
+            width: 120px;
+            height: 120px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .team-item {
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .team-img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+</style>
+
+
+<div class="team" id="team">
+    <div class="container">
+        <div class="section-header text-center">
+            <p style="color: #24702A;">Our Management</p>
+            <h2>Meet Our Management Team</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="{% static 'img/JOSEPH.png' %}" alt="Dr. Joseph Koskey">
+                    </div>
+                    <div class="team-text">
+                        <h2 style="color: #ffffff;">Dr. Joseph Koskey</h2>
+                        <p>Managing Director/CEO</p>
+                        <button class="view-profile-btn" onclick="openPopup(0)">View Profile</button>
+                    </div>
+                    <div class="team-social">
+                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="{% static 'img/Donna-Portrait-2022-Resized-28112022_0-320x320-1-150x150.jpg' %}" alt="Donna Atieno">
+                    </div>
+                    <div class="team-text">
+                        <h2 style="color: #ffffff;">Donna Atieno</h2>
+                        <p>Director, Corporate Services</p>
+                        <button class="view-profile-btn" onclick="openPopup(1)">View Profile</button>
+                    </div>
+                    <div class="team-social">
+                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="{% static 'img/BENARD.jpg' %}" alt="Dr. Bernard Kirui">
+                    </div>
+                    <div class="team-text">
+                        <h2 style="color: #ffffff;">Dr. Bernard Kirui</h2>
+                        <p>Director, Transactions Services</p>
+                        <button class="view-profile-btn" onclick="openPopup(2)">View Profile</button>
+                    </div>
+                    <div class="team-social">
+                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="{% static 'img/Ms._Irene_Kamunges_pc_ke_0-272x300.png' %}" alt="Ms. Irene Kamunge">
+                    </div>
+                    <div class="team-text">
+                        <h2 style="color: #ffffff;">Ms. Irene Kamunge</h2>
+                        <p>Manager, Supply Chain Management</p>
+                        <button class="view-profile-btn" onclick="openPopup(3)">View Profile</button>
+                    </div>
+                    <div class="team-social">
+                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="{% static 'img/SYLVERSTETR.jpg' %}" alt="Sylvester Kamau">
+                    </div>
+                    <div class="team-text">
+                        <h2 style="color: #ffffff;">Sylvester Kamau</h2>
+                        <p>Mgr, Supply Chain Mgmt</p>
+                        <button class="view-profile-btn" onclick="openPopup(4)">View Profile</button>
+                    </div>
+                    <div class="team-social">
+                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="{% static 'img/ciff_0-300x268.png' %}" alt="Mr. Clive Kinoti">
+                    </div>
+                    <div class="team-text">
+                        <h2 style="color: #ffffff;">Mr. Clive Kinoti</h2>
+                        <p>Manager, Internal Audit</p>
+                        <button class="view-profile-btn" onclick="openPopup(5)">View Profile</button>
+                    </div>
+                    <div class="team-social">
+                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="{% static 'img/Jemimah-Profile-320x320.png' %}" alt="Ms. Jemimah Muraya">
+                    </div>
+                    <div class="team-text">
+                        <h2 style="color: #ffffff;">Ms. Jemimah Muraya</h2>
+                        <p>Mgr, Research & Planning</p>
+                        <button class="view-profile-btn" onclick="openPopup(6)">View Profile</button>
+                    </div>
+                    <div class="team-social">
+                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer Start -->
+<div class="footer wow fadeIn" data-wow-delay="0.3s">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-3">
+                <div class="footer-contact">
+                    <h2>Office Contact</h2>
+                    <p><i class="fa fa-map-marker-alt"></i>10th Floor Social Security House - Annex, Nairobi, Kenya</p>
+                    <p><i class="fa fa-phone-alt"></i>020 8696 800</p>
+                    <p><i class="fa fa-envelope"></i>info@privatisation.go.ke</p>
+                    <div class="footer-social">
+                        <a href="https://x.com/privatizationke?lang=en"><i class="fab fa-twitter"></i></a>
+                        <a href="https://web.facebook.com/privatisationauthority"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/privatisationauthority/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/privatizationke/?originalSubdomain=ke"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="footer-link">
+                    <h2>Service Areas</h2>
+                    <a href="">Privatisation Programs</a>
+                    <a href="">Consultation Services</a>
+                    <a href="">Project Management</a>
+                    <a href="">Policy Development</a>
+                    <a href="">Research and Analysis</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="footer-link">
+                    <h2>Useful Pages</h2>
+                    <a href="mandate.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="board.html">Our Team</a>
+                    <a href="success.html">Projects</a>
+                   
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="newsletter">
+                    <h2>Newsletter</h2>
+                    <p>
+                        Stay updated with the latest news and developments from the Privatisation Authority. Subscribe to our newsletter.
+                    </p>
+                    <div class="form">
+                        <input class="form-control" placeholder="Email here">
+                        <button class="btn">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container footer-menu">
+        <div class="f-menu">
+            <a href="">Terms of Use</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Cookies</a>
+            <a href="">Help</a>
+            <a href="">FAQs</a>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/slick/slick.min.js"></script>
+
+        
+        <script src="js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+    </body>
+</html>
