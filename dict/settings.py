@@ -83,6 +83,10 @@ DATABASES = {
         
     }
 }
+DATABASE_URL = "postgresql://postgres:ZxlxbYLJowJIwslZqwOZqQHAUrltCeqq@monorail.proxy.rlwy.net:21824/railway"
+
+import dj_database_url
+DATABASES['default'] = dj_database_url.parse(DATABASE_URL, conn_max_age=1800)
 
 
 # Password validation

@@ -11,23 +11,14 @@ WORKDIR /app
 # Install dependencies
 COPY ./requirements.txt .
 # Install system-level dependencies
-RUN apk add --no-cache \
-    python3-dev \
-    py3-pip \
-    py3-wheel \
-    py3-cffi \
-    libffi-dev \
-    cairo \
-    pango \
-    gdk-pixbuf \
-    shared-mime-info
+
 RUN pip install --upgrade pip
 
 RUN pip install --upgrade setuptools
 
 RUN pip install gunicorn
 RUN pip install Pillow
-RUN pip install python-dotenv
+
 
 
 
