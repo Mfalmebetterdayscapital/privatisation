@@ -230,3 +230,6 @@ def logout(request):
         return redirect("/index")
     else:
         return redirect("/index")
+
+def downloads(request):
+    return render (request,"downloads.html")
