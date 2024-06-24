@@ -425,6 +425,75 @@
     }
 </style>
 
+<style>
+    .service-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding: 20px;
+        width: 100%;
+        height: 80vh; /* Adjust height for larger screens */
+    }
+    
+    .service-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .view-profile-btn {
+        background-color: #E42130;
+        color: #ffffff;
+        border: none;
+        padding: 2.5px 5px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    @media (max-width: 576px) {
+        .service-section {
+            height: 60vh; /* Adjust height for smaller screens */
+        }
+    }
+
+     /* Popup Styles */
+     .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 110%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+    }
+
+    .popup-content {
+        background-color: #ffffff;
+        max-width: 1300px;
+        margin: 100px auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        position: relative;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        color: #777;
+        font-size: 20px;
+        transition: color 0.3s;
+    }
+
+    .close-btn:hover {
+        color: #333;
+    }
+</style>
+
+
 
 <div class="team" id="team">
     <div class="container">
@@ -479,7 +548,7 @@
                     </div>
                     <div class="team-text">
                         <h2 style="color: #ffffff;">Ms. Irene Kamunge</h2>
-                        <p>Manager, Supply Chain Management</p>
+                        <p>Coperation Secretary & Director Legal</p>
                         <button class="view-profile-btn" onclick="openPopup(3)">View Profile</button>
                     </div>
 
@@ -529,6 +598,18 @@
         </div>
     </div>
 </div>
+<!-- Popup -->
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2 id="popup-name" style="color: #000000;"></h2>
+        <p id="popup-role" style="color: #000000;"></p>
+        <p id="popup-info" style="color: #000000;"></p>
+    </div>
+</div>
+
+  <!-- JavaScript -->
+
 <!-- Footer Start -->
 <!-- Footer Start -->
 <div class="footer wow fadeIn" data-wow-delay="0.3s">
@@ -576,6 +657,7 @@
     </div>
     
 </div>
+
 <!-- Footer End -->
 
             <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
@@ -601,6 +683,80 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
         <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-</body>
+    <div class="section">
+        <div class="section-title" onclick="toggleSection(event)">
+            Permanent Secretary Speech 
+            <span class="icon expand"></span>
+        </div>
+        <div class="section-content">
+            <a href="https://drive.google.com/file/d/1HJDvialiYEZlgSf14cH78-QDzuM_zloT/view?usp=sharing">Click To View Notes</a>
+        </div>
+    </div>
+ <!-- JavaScript -->
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const members = [
+            {
+                name: "DR. JOSEPH KOSKEY",
+                role: "Managing Director/CEO",
+                info: "Joseph holds a PhD in Business Administration, MBA (Strategic Management) and Bachelor of Commerce (Accounting) degrees from the University of Nairobi. He is a Certified Public Accountant, Certified Investment and Financial Analyst. He is a member of ICPAK, the Institute of Certified Secretaries of Kenya and the Institute of Directors Kenya. He is also a certified trainer on corporate governance. Joseph has over 26 years business management experience gained in diverse industries, 19 years of which have been in senior leadership and management positions. He has a distinguished leadership career with a proven track-record of achievements (both in the private and public sectors) in revenue growth, productivity improvement, operational excellence and bottom-line turnaround. He is respected for a strong work-ethic and irreproachable integrity. Prior to his appointment, Joseph had served as the Group CEO at Sovereign Group Ltd, Managing Director at the Kenya Bureau of Standards and as Managing Director at Urgent Cargo Handling Ltd among others. He has also served as the Regional Change Manager for P&O Nedlloyd East Africa and Indian Ocean Islands covering Kenya, Uganda, Tanzania, Mauritius, Madagascar & Seychelles. This background equipped him with invaluable skills and expertise in strategic and financial management, business restructuring and change management."
+            },
+            {
+                name: "MS. DONNA ATIENO",
+                role: "DIRECTOR, CORPORATE SERVICES.",
+                info: "Ms. Donna holds a Master of Science in Development Finance from Strathmore University and a Master of Business Administration (Finance) from Kenya Methodist University. She also graduated from Moi University with a Bachelor of Business Management (Accounting) degree and is a Certified Public Accountant of Kenya (CPA-K) registered with the Institute of Certified Public Accountants of Kenya (ICPAK). She is also a Certified Retirement Benefits Trustee. Donna has over 15 years of experience in Public Service, more than half of which have been in a senior management role. She is a strategic leader with vast experience in public financial management; public sector financial reporting; project appraisal, profiling, and risk analysis; government policies and guidelines in human resource management and administration; and pension administration."
+            },
+            {
+                name: "DR. BERNARD KIRUI",
+                role: "Director, Transactions Services",
+                info: "Dr. Bernard Kirui holds a PhD in Economics from the University of Nairobi, a Master’s degree in Economics, and a Bachelor’s in Economics and Statistics from Kenyatta University. He is a Certified Public Accountant and a member of the Institute of Certified Public Accountants of Kenya (ICPAK). Prior to joining the Commission, Dr. Kirui held various management roles at the Kenya Revenue Authority as Manager in charge of Surveys and Business Analysis and as a Manager in charge of Strategy and Policy Analysis. He was responsible for coordinating the preparation of key tax policy documents, overseeing financial analysis, providing technical support, monitoring tax policy developments and stakeholder engagement. Prior to joining the KRA, Dr. Kirui worked as a Part-Time Lecturer at the National Youth Service and in various roles at the Co-operative Bank of Kenya. He also worked as a Part-Time Lecturer for International Trade and Economics at Moi University, Nairobi Campus. Dr. Kirui was also a CSAE Visiting Fellow at the University of Oxford in the United Kingdom, where he worked on his research."
+            },
+            {
+                name: "MS. IRENE KAMUNGE",
+                role: "Manager, Supply Chain Management",
+                info: ""
+            },
+            {
+                name: "MR. SYLVESTER KAMAU",
+                role: "Alternate To The Attorney-General",
+                info: "Sylvester holds a Master of Science (MSc) degree in Procurement and Logistics from the Jomo Kenyatta University of Agriculture and Technology and a CIPS post-graduate professional diploma in Procurement and Supply. He also holds a Bachelor of Arts degree in Government and Public Administration from Moi University. He is a registered and licensed member of the Kenya Institute of Supplies Management. Sylvester has over 20 years’ experience in Supply Chain Management, having worked for various organizations in different capacities. He also has vast knowledge in public procurement. Currently, Sylvester is pursuing his Doctor of Philosophy degree in Supply Chain Management from the Jomo Kenyatta University of Agriculture and Technology and is working on his dissertation after successfully completing the coursework."
+            },
+            {
+                name: "MR. CLIVE KINOTI NJIRU",
+                role: "Manager, Internal Audit",
+                info: "Clive holds a Master of Commerce in Finance from Strathmore University and a Bachelor of Arts in Economics and Business Studies from Kenyatta University. He is a member of the Institute of Certified Public Accountants of Kenya (ICPAK), Institute of Internal Auditors (IIA), and Institute of Certified Investment and Financial Analysts (CIFA). He has over fifteen (15) years of experience in Governance, Risk Management, and Compliance. Before joining the Commission, Clive held several Senior Management positions at East African Portland Cement Plc and the Ministry of Co-operatives and Micro, Small and Medium Enterprises (MSME) Development."
+            },
+            {
+                name: "MS. JEMIMAH MURAYA",
+                role: "Manager, Research & Planning",
+                info: "Ms. Jemimah Muraya is a statistician by profession who holds a Master of Science (MSc) degree in Social Statistics from the University of Nairobi. She has a Bachelor of Science degree in Applied Statistics from Maseno University and is currently pursuing a Master of Business Administration degree (Strategic Management) in USIU-A. Prior to joining the Commission, Ms. Jemimah held various management roles including Manager Research, Strategy and Planning at Tana Water Works Development Agency and Research and Policy Manager at the NGOs Co-ordination Board. She has vast experience in Research, Data Management, Strategic Planning, Performance Management, Quality Management Systems, Monitoring, and Evaluation drawn from over 14 years of experience with several public sector organizations."
+            }
+        ];
+
+        function openPopup(index) {
+            console.log("Popup opened for index:", index);  // Debugging line
+            const member = members[index];
+            if (member) {
+                console.log("Member found:", member);  // Debugging line
+                document.getElementById('popup-name').innerText = member.name;
+                document.getElementById('popup-role').innerText = member.role;
+                document.getElementById('popup-info').innerText = member.info;
+                document.getElementById('popup').style.display = 'flex';
+            } else {
+                console.error("Member not found for index:", index);  // Debugging line
+            }
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        // Expose functions to the global scope
+        window.openPopup = openPopup;
+        window.closePopup = closePopup;
+    });
+</script>
+ 
     </body>
 </html>
