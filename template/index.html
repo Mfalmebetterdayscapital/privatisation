@@ -31,116 +31,117 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow sticky-top" style="height: 85px;">
-    <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center" href="{% url 'index' %}">
-            <img src="{% static 'img/PA logo.png' %}" alt="Privatisation Authority Logo" class="logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'index' %}" style="color: #000000;">HOME</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="whoWeAreDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
-                        WHO WE ARE <i class="fas fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="whoWeAreDropdown">
-                        <li><a class="dropdown-item" href="{% url 'mandate' %}">Mandate</a></li>
-                        <li><a class="dropdown-item" href="{% url 'board' %}">Board Management</a></li>
-                        <li><a class="dropdown-item" href="{% url 'management' %}">Management Team</a></li>
-                        <li class="dropdown-submenu">
-                            <a class="dropdown-item dropdown-toggle" href="#" id="galleryDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Service Charter
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="galleryDropdown">
-                                <li><a class="dropdown-item" href="https://docs.google.com/document/d/1IYKCfYpKjZcjw05VRfSLD40UcgvbPj0m/edit?usp=sharing&ouid=106924956695957088139&rtpof=true&sd=true">Swahili Version</a></li>
-                                <li><a class="dropdown-item" href="https://docs.google.com/document/d/1GwNPc0jufACj_q53i6PoSyVdN-hsRsqU/edit?usp=sharing&ouid=106924956695957088139&rtpof=true&sd=true">English Version</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="dropdown-item" href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/PRIVATIZATION-COMMISSION-STRATEGIC-PLAN-2022.2027-1-1.pdf" target="_blank">Strategic Plan</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="privatisationDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
-                        PRIVATISATION <i class="fas fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="privatisationDropdown">
-                        <li><a class="dropdown-item" href="{% url 'success' %}">Success Stories</a></li>
-                        <li><a class="dropdown-item" href="{% url 'privatisation' %}">Privatisation Programme</a></li>
-                        <li><a class="dropdown-item" href="{% url 'entreprise' %}">Public Enterprises Reform</a></li>
-                        <li><a class="dropdown-item" href="{% url 'completed' %}">Completed Privatisations</a></li>
-                        <li><a class="dropdown-item" href="{% url 'act' %}">Privatisation Act</a></li>
-                        <li><a class="dropdown-item" href="{% url 'process' %}">Privatisation Process</a></li>
-                        <li><a class="dropdown-item" href="{% url 'benefits' %}">Benefits Of Privatisation</a></li>
-                        <li><a class="dropdown-item" href="{% url 'status' %}">Privatisation Programme Status</a></li>
-                        <li><a class="dropdown-item" href="{% url 'research' %}">Research</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="opportunitiesDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
-                        OPPORTUNITIES <i class="fas fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="opportunitiesDropdown">
-                        <li class="dropdown-submenu">
-                            <a class="dropdown-item dropdown-toggle" href="#" id="tendersDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Careers
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="tendersDropdown">
-                                <li><a class="dropdown-item" href="{% url 'vacancies' %}">Vacancies</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown-submenu">
-                            <a class="dropdown-item dropdown-toggle" href="#" id="tendersDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Tenders
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="tendersDropdown">
-                                <li><a class="dropdown-item" href="{% url 'tenders' %}">Tenders</a></li>
-                                <li><a class="dropdown-item" href="{% url 'portal' %}">E-Procurement Portal</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown-submenu">
-                            <a class="dropdown-item dropdown-toggle" href="#" id="tendersDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Investments
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="tendersDropdown">
-                                <li><a class="dropdown-item" href="{% url 'tenders' %}">Transactions Teaser</a></li>
-                                <li><a class="dropdown-item" href="{% url 'expressions' %}">Expressions Of interest (EOI)</a></li>
-                                <li><a class="dropdown-item" href="{% url 'proposal' %}">Request For Proposal (RFP)</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="informationCentreDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
-                        INFORMATION CENTRE <i class="fas fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="informationCentreDropdown">
-                        <li><a class="dropdown-item" href="{% url 'news' %}">Our News</a></li>
-                        <li><a class="dropdown-item" href="{% url 'login' %}">Access To Information Center</a></li>
-                        <li><a class="dropdown-item" href="{% url 'act' %}">Privatisation Act</a></li>
-                        <li><a class="dropdown-item" href="{% url 'policy' %}">Anti-Corruption Policy</a></li>
-                        <li><a class="dropdown-item" href="{% url 'business' %}">Business Continuity Policy</a></li>
-                        <li><a class="dropdown-item" href="{% url 'mechanism' %}">Complaints Handling Mechanism</a></li>
-                        <li><a class="dropdown-item" href="https://docs.google.com/document/d/1vMwiEhgPHBaZu8J2Mzeg4jMDqFnBpUvc/edit?usp=sharing&ouid=106924956695957088139&rtpof=true&sd=true">Quality Policy</a></li>
-                        <li><a class="dropdown-item" href="{% url 'csr' %}">Corporate Social Responsibility Policy</a></li>
-                        <li><a class="dropdown-item" href="{% url 'research' %}">Research</a></li>
-                        <li><a class="dropdown-item" href="{% url 'images' %}">Gallery</a></li>
-                        <li><a class="dropdown-item" href="{% url 'videos' %}">Videos</a></li>
-                        <li><a class="dropdown-item" href="{% url 'downloads' %}">Downloads</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'contact' %}" style="color: #000000;">CONTACT US</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow sticky-top" style="height: 85px;">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="{% url 'index' %}">
+                <img src="{% static 'img/PA logo.png' %}" alt="Privatisation Authority Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}" style="color: #000000;">HOME</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="whoWeAreDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
+                            WHO WE ARE <i class="fas fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="whoWeAreDropdown">
+                            <li><a class="dropdown-item" href="{% url 'mandate' %}">Mandate</a></li>
+                            <li><a class="dropdown-item" href="{% url 'board' %}">Board Management</a></li>
+                            <li><a class="dropdown-item" href="{% url 'management' %}">Management Team</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="galleryDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Service Charter
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="galleryDropdown">
+                                    <li><a class="dropdown-item" href="https://drive.google.com/file/d/1UZEXSDo6qIpq107EMA13ZGbo5NZDMzM6/view?usp=sharing">Swahili Version</a></li>
+                                    <li><a class="dropdown-item" href="https://drive.google.com/file/d/11pa5mmVY3QxOHb7QF7WECbN4dZg99C7b/view?usp=sharing">English Version</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="https://drive.google.com/file/d/1ZmAGJW4g8XpFybsygnsaATNTcdMAcguc/view?usp=sharing" target="_blank">Strategic Plan</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="privatisationDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
+                            PRIVATISATION <i class="fas fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="privatisationDropdown">
+                            <li><a class="dropdown-item" href="{% url 'success' %}">Success Stories</a></li>
+                            <li><a class="dropdown-item" href="{% url 'privatisation' %}">Privatisation Programme</a></li>
+                            <li><a class="dropdown-item" href="{% url 'entreprise' %}">Public Enterprises Reform</a></li>
+                            <li><a class="dropdown-item" href="{% url 'completed' %}">Completed Privatisations</a></li>
+                            <li><a class="dropdown-item" href="{% url 'act' %}">Privatisation Act</a></li>
+                            <li><a class="dropdown-item" href="{% url 'process' %}">Privatisation Process</a></li>
+                            <li><a class="dropdown-item" href="{% url 'benefits' %}">Benefits Of Privatisation</a></li>
+                            <li><a class="dropdown-item" href="{% url 'status' %}">Privatisation Programme Status</a></li>
+                            <li><a class="dropdown-item" href="{% url 'research' %}">Research</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="opportunitiesDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
+                            OPPORTUNITIES <i class="fas fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="opportunitiesDropdown">
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="tendersDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Careers
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="tendersDropdown">
+                                    <li><a class="dropdown-item" href="{% url 'vacancies' %}">Vacancies</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="tendersDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Tenders
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="tendersDropdown">
+                                    <li><a class="dropdown-item" href="{% url 'tenders' %}">Tenders</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'portal' %}">E-Procurement Portal</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="tendersDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Investments
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="tendersDropdown">
+                                    <li><a class="dropdown-item" href="{% url 'tenders' %}">Transactions Teaser</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'expressions' %}">Expressions Of interest (EOI)</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'proposal' %}">Request For Proposal (RFP)</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="informationCentreDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
+                            INFORMATION CENTRE <i class="fas fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="informationCentreDropdown">
+                            <li><a class="dropdown-item" href="{% url 'news' %}">Our News</a></li>
+                            <li><a class="dropdown-item" href="{% url 'access' %}">Access To Information Center</a></li>
+                           
+                            <li><a class="dropdown-item" href="{% url 'act' %}">Privatisation Act</a></li>
+                            <li><a class="dropdown-item" href="{% url 'policy' %}">Anti-Corruption Policy</a></li>
+                            <li><a class="dropdown-item" href="{% url 'business' %}">Business Continuity Policy</a></li>
+                            <li><a class="dropdown-item" href="{% url 'mechanism' %}">Complaints Handling Mechanism</a></li>
+                            <li><a class="dropdown-item" href="https://drive.google.com/file/d/1lMrxxZeR7ulk0lIhAAkKeH5G_8BDEdNh/view?usp=sharing">Quality Policy</a></li>
+                            <li><a class="dropdown-item" href="{% url 'csr' %}">Corporate Social Responsibility Policy</a></li>
+                            <li><a class="dropdown-item" href="{% url 'research' %}">Research</a></li>
+                            <li><a class="dropdown-item" href="{% url 'images' %}">Gallery</a></li>
+                            <li><a class="dropdown-item" href="{% url 'videos' %}">Videos</a></li>
+                            <li><a class="dropdown-item" href="{% url 'downloads' %}">Downloads</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}" style="color: #000000;">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
 <style>
     /* Custom dropdown submenu styling */
@@ -397,7 +398,7 @@
                                 </div>
                                 <div class="feature-text">
                                     <h3 style="color: #ffffff;">Expertise in Privatisation</h3>
-                                    <p style="color: #ffffff;">Our team consists of experts with deep knowledge and experience in privatisation strategies and implementation.</p>
+                                    <p style="color: #ffffff;">Our team consists of experts with deep knowledge and experience in Privatisation Programme</p>
                                 </div>
                             </div>
                         </div>
@@ -805,7 +806,145 @@
 
 
             
-<!-- FAQs Start --> <div class="faqs"> <div class="container"> <div class="section-header text-center"> <p style="color: #24702A;">Frequently Asked Questions</p> <h2>You May Ask</h2> </div> <div class="row"> <div class="col-md-6"> <div id="accordion-1"> <div class="card wow fadeInLeft" data-wow-delay="0.1s"> <div class="card-header"> <a class="card-link collapsed" data-toggle="collapse" href="#collapseOne"> Which transactions can be referred to as Privatisations? </a> </div> <div id="collapseOne" class="collapse" data-parent="#accordion-1"> <div class="card-body"> The Privatization Act, 2005 defines privatisation as any transaction or transactions that result in a transfer, other than to a public entity, of assets of a public entity including shares in a state corporation, operational control of assets of a public entity, or operations previously performed by a public entity. </div> </div> </div> <div class="card wow fadeInLeft" data-wow-delay="0.2s"> <div class="card-header"> <a class="card-link collapsed" data-toggle="collapse" href="#collapseTwo"> Which transactions must be implemented under the Privatisation Programme? </a> </div> <div id="collapseTwo" class="collapse" data-parent="#accordion-1"> <div class="card-body"> Section 22 (2) of the Privatisation Act provides that the following transactions must be implemented under the Privatisation Programme: the transfer of a public entity’s interests in a state corporation or other corporation, the transfer of the operational control of a state corporation or a substantial part of its activities, and any other privatisation prescribed by regulation. </div> </div> </div> <div class="card wow fadeInLeft" data-wow-delay="0.3s"> <div class="card-header"> <a class="card-link collapsed" data-toggle="collapse" href="#collapseThree"> What constitutes the Privatisation Programme? </a> </div> <div id="collapseThree" class="collapse" data-parent="#accordion-1"> <div class="card-body"> The Privatisation Programme is a list of public sector assets and operations approved by the Cabinet to be considered for privatisation and subsequently privatised once the approval process is completed. </div> </div> </div> <div class="card wow fadeInLeft" data-wow-delay="0.4s"> <div class="card-header"> <a class="card-link collapsed" data-toggle="collapse" href="#collapseFour"> What approvals are required before privatisation? </a> </div> <div id="collapseFour" class="collapse" data-parent="#accordion-1"> <div class="card-body"> The Privatisation Act requires that privatisation transactions to be implemented by the Authority be approved at two main stages: Approval of the Privatisation Programme and its gazettement, and Approval of detailed privatisation proposals prepared by the Privatisation Authority for each of the assets or operations included in the Programme. </div> </div> </div> <div class="card wow fadeInLeft" data-wow-delay="0.5s"> <div class="card-header"> <a class="card-link collapsed" data-toggle="collapse" href="#collapseFive"> What does the Privatisation Authority do? </a> </div> <div id="collapseFive" class="collapse" data-parent="#accordion-1"> <div class="card-body"> The Authority is mandated to formulate, manage and implement the Privatisation Programme, make and implement specific proposals for privatisation in accordance with the Privatisation Programme, carry out such other functions as are provided for under the Privatisation Act (2005), and carry out such other functions as the Commission considers necessary to advance the Privatisation Programme. </div> </div> </div> </div> </div> <div class="col-md-6"> <div id="accordion-2"> <div class="card wow fadeInRight" data-wow-delay="0.1s"> <div class="card-header"> <a class="card-link collapsed" data-toggle="collapse" href="#collapseSix"> Who funds the Privatisation Authority? </a> </div> <div id="collapseSix" class="collapse" data-parent="#accordion-2"> <div class="card-body"> The operations of the Authority are financed from funds appropriated by Parliament and grants and donations approved by the Minister of Finance. </div> </div> </div> <div class="card wow fadeInRight" data-wow-delay="0.2s"> <div class="card-header"> <a class="card-link collapsed" data-toggle="collapse" href="#collapseSeven"> How does privatisation benefit Kenyans? </a> </div> <div id="collapseSeven" class="collapse" data-parent="#accordion-2"> <div class="card-body"> The desired benefits from privatisation include improvement of infrastructure and the delivery of public services, reduction of the demand for government resources, generation of additional government revenues, improvement of the regulation of the economy, improvement of the efficiency of the Kenyan economy, broadening of the base of ownership in the Kenyan economy, and enhancement and development of the capital markets. </div> </div> </div> <div class="card wow fadeInRight" data-wow-delay="0.3s"> <div class="card-header"> <a class="card-link collapsed" data-toggle="collapse" href="#collapseEight"> Who constitutes the Privatisation Authority Board? </a> </div> <div id="collapseEight" class="collapse" data-parent="#accordion-2"> <div class="card-body"> The Privatisation Authority Board comprises of the Chairman appointed by the President, the Attorney General, the Permanent Secretary to the Treasury, seven members appointed by the Minister and approved by the relevant Committee of Parliament, and the Executive Director. </div> </div> </div> <div class="card wow fadeInRight" data-wow-delay="0.4s"> <div class="card-header"> <a class="card-link collapsed" data-toggle="collapse" href="#collapseNine"> Which privatisation methods are used when privatising government investments? </a> </div> <div id="collapseNine" class="collapse" data-parent="#accordion-2"> <div class="card-body"> Section 25 of the Privatisation Act lists the following methods: public offering of shares, concessions, leases, management contracts and other forms of public-private partnerships, negotiated sales resulting from the exercise of pre-emptive rights, sale of assets, including liquidation, and any other method approved by the Cabinet in the approval of a specific privatisation proposal. </div> </div> </div> <div class="card wow fadeInRight" data-wow-delay="0.5s"> <div class="card-header"> <a class="card-link collapsed" data-toggle="collapse" href="#collapseTen"> Who audits the privatisation transactions and the Authority books? </a> </div> <div id="collapseTen" class="collapse" data-parent="#accordion-2"> <div class="card-body"> The Privatisation Act provides for auditing by the Auditor General in accordance with the Public Audit Act. </div> </div> </div> </div> </div> </div> </div> </div> <!-- FAQs End -->
+<!-- FAQs Start -->
+<div class="faqs">
+    <div class="container">
+        <div class="section-header text-center">
+            <p style="color: #24702A;">Frequently Asked Questions</p>
+            <h2>You May Ask</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div id="accordion-1">
+                    <div class="card wow fadeInLeft" data-wow-delay="0.1s">
+                        <div class="card-header">
+                            <a class="card-link collapsed" data-toggle="collapse" href="#collapseOne"> What is Privatisation? </a>
+                        </div>
+                        <div id="collapseOne" class="collapse" data-parent="#accordion-1">
+                            <div class="card-body">
+                                Privatisation is a transaction that results in the transfer, other than to a public entity, of the assets and/or liabilities of a public entity, including the shares in a public entity.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="card-header">
+                            <a class="card-link collapsed" data-toggle="collapse" href="#collapseTwo"> What is the mandate of the Privatisation Authority? </a>
+                        </div>
+                        <div id="collapseTwo" class="collapse" data-parent="#accordion-1">
+                            <div class="card-body">
+                                The Privatisation Authority, established under Section 8 of the Privatisation Act, 2023, is tasked with advising the government on all aspects of privatisation of public entities, facilitating the implementation of government policies on privatisation, and implementing the privatisation programme.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card wow fadeInLeft" data-wow-delay="0.3s">
+                        <div class="card-header">
+                            <a class="card-link collapsed" data-toggle="collapse" href="#collapseThree"> What is a Privatisation Programme? </a>
+                        </div>
+                        <div id="collapseThree" class="collapse" data-parent="#accordion-1">
+                            <div class="card-body">
+                                A Privatisation Programme is a list of public entities identified for privatisation, subjected to public participation, approved by the Cabinet, ratified by the National Assembly, and gazetted for implementation.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card wow fadeInLeft" data-wow-delay="0.4s">
+                        <div class="card-header">
+                            <a class="card-link collapsed" data-toggle="collapse" href="#collapseFour"> What are the benefits of privatisation? </a>
+                        </div>
+                        <div id="collapseFour" class="collapse" data-parent="#accordion-1">
+                            <div class="card-body">
+                                Benefits include reduction of the demand for government resources, generation of additional government revenues, broadening the base of ownership in the economy, improvement of infrastructure and public services, better regulation of the economy, increased efficiency, and enhancement of capital markets.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card wow fadeInLeft" data-wow-delay="0.5s">
+                        <div class="card-header">
+                            <a class="card-link collapsed" data-toggle="collapse" href="#collapseFive"> How is the Privatisation Programme formulated? </a>
+                        </div>
+                        <div id="collapseFive" class="collapse" data-parent="#accordion-1">
+                            <div class="card-body">
+                                The National Treasury and Economic Planning Cabinet Secretary formulates the programme through consultation with affected parties, submits it to the Cabinet for approval, and then forwards it to the National Assembly for ratification. Once ratified, it is published in the Kenya Gazette.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card wow fadeInLeft" data-wow-delay="0.6s">
+                        <div class="card-header">
+                            <a class="card-link collapsed" data-toggle="collapse" href="#collapseSix"> Are Members of Parliament involved in the privatisation process? </a>
+                        </div>
+                        <div id="collapseSix" class="collapse" data-parent="#accordion-1">
+                            <div class="card-body">
+                                Yes, Members of Parliament are involved. After Cabinet approval, the programme is forwarded to the National Assembly for ratification before it is gazetted and implemented.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="accordion-2">
+                    <div class="card wow fadeInRight" data-wow-delay="0.1s">
+                        <div class="card-header">
+                            <a class="card-link collapsed" data-toggle="collapse" href="#collapseSeven"> Who implements the Privatisation Programme? </a>
+                        </div>
+                        <div id="collapseSeven" class="collapse" data-parent="#accordion-2">
+                            <div class="card-body">
+                                The Privatisation Authority implements the programme in accordance with the Privatisation Act, 2023.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card wow fadeInRight" data-wow-delay="0.2s">
+                        <div class="card-header">
+                            <a class="card-link collapsed" data-toggle="collapse" href="#collapseEight"> How is the Privatisation Programme implemented? </a>
+                        </div>
+                        <div id="collapseEight" class="collapse" data-parent="#accordion-2">
+                            <div class="card-body">
+                                Implementation involves assessing the entity's position, developing a proposal for Cabinet approval, conducting a business evaluation to determine the reserve price, and privatising the entity using the approved method.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card wow fadeInRight" data-wow-delay="0.3s">
+                        <div class="card-header">
+                            <a class="card-link collapsed" data-toggle="collapse" href="#collapseNine"> Where do the proceeds of privatisation go? </a>
+                        </div>
+                        <div id="collapseNine" class="collapse" data-parent="#accordion-2">
+                            <div class="card-body">
+                                Proceeds from privatisation are paid into the Consolidated Fund.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card wow fadeInRight" data-wow-delay="0.4s">
+                        <div class="card-header">
+                            <a class="card-link collapsed" data-toggle="collapse" href="#collapseTen"> Who can participate in privatisation? </a>
+                        </div>
+                        <div id="collapseTen" class="collapse" data-parent="#accordion-2">
+                            <div class="card-body">
+                                Any person, whether Kenyan or non-Kenyan, can participate. However, the Cabinet Secretary, National Treasury and Economic Planning, may limit participation to Kenyans only.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card wow fadeInRight" data-wow-delay="0.5s">
+                        <div class="card-header">
+                            <a class="card-link collapsed" data-toggle="collapse" href="#collapseEleven"> Is there an appeal mechanism for aggrieved parties? </a>
+                        </div>
+                        <div id="collapseEleven" class="collapse" data-parent="#accordion-2">
+                            <div class="card-body">
+                                Yes. Sections 45 and 46 of the Privatisation Act, 2023 provide mechanisms for lodging objections to the Authority and appeals to the Privatisation Review Board.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card wow fadeInRight" data-wow-delay="0.6s">
+                        <div class="card-header">
+                            <a class="card-link collapsed" data-toggle="collapse" href="#collapseTwelve"> Where are the Privatisation Authority offices located? </a>
+                        </div>
+                        <div id="collapseTwelve" class="collapse" data-parent="#accordion-2">
+                            <div class="card-body">
+                                The offices are located on the 10th Floor of Social Security House – Annex, Bishops Road, Off Ngong’ Road, Nairobi. Contact details: P.O. Box 34542 - 00100, NAIROBI, Telephone: 020 8696800, Website: www.privatisation.go.ke, Email: info@privatisation.go.ke, Social Media: Facebook, Instagram, LinkedIn, and X (Twitter) @PrivatisationKE.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- FAQs End -->
 
            
 <!-- Recent Activities Start -->
@@ -983,6 +1122,7 @@ document.querySelectorAll('.toggle-title').forEach(btn => {
 </script>
 
 <!-- Footer Start -->
+<!-- Footer Start -->
 <div class="footer wow fadeIn" data-wow-delay="0.3s">
     <div class="container">
         <div class="row">
@@ -993,12 +1133,10 @@ document.querySelectorAll('.toggle-title').forEach(btn => {
                     <p><i class="fa fa-phone-alt"></i>020 8696 800</p>
                     <p><i class="fa fa-envelope"></i>info@privatisation.go.ke</p>
                     <div class="footer-social">
-                        <a href="https://x.com/privatizationke?lang=en"><i class="fab fa-twitter"></i></a>
+                        <a href="https://x.com/PrivatisationKE"><i class="fab fa-twitter"></i></a>
                         <a href="https://web.facebook.com/privatisationauthority"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/privatisationauthority/"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.linkedin.com/company/privatizationke/?originalSubdomain=ke"><i class="fab fa-linkedin-in"></i></a>
-                        
-
                     </div>
                 </div>
             </div>
@@ -1015,36 +1153,25 @@ document.querySelectorAll('.toggle-title').forEach(btn => {
             <div class="col-md-6 col-lg-3">
                 <div class="footer-link">
                     <h2>Useful Pages</h2>
-                    <a href="{% url 'index' %}">About Us</a>
-                    <a href="{% url 'contact' %}">Contact Us</a>
-                    <a href="{% url 'index' %}">Our Team</a>
-                    <a href="{% url 'index' %}">Projects</a>
+                    <a href="/mandate">About Us</a>
+                    <a href="/contact">Contact Us</a>
+                    <a href="/board">Our Team</a>
+                    <a href="/success">Projects</a>
+                   
                 </div>
             </div>
-            
             <div class="col-md-6 col-lg-3">
                 <div class="newsletter">
                     <h2>Newsletter</h2>
                     <p>
                         Stay updated with the latest news and developments from the Privatisation Authority. Subscribe to our newsletter.
                     </p>
-                    <div class="form">
-                        <input class="form-control" placeholder="Email here">
-                        <button class="btn">Submit</button>
-                    </div>
+                    
                 </div>
             </div>
         </div>
     </div>
-    <div class="container footer-menu">
-        <div class="f-menu">
-            <a href="">Terms of Use</a>
-            <a href="">Privacy Policy</a>
-            <a href="">Cookies</a>
-            <a href="">Help</a>
-            <a href="">FAQs</a>
-        </div>
-    </div>
+    
 </div>
 <!-- Footer End -->
 

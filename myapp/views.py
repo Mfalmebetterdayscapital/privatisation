@@ -16,6 +16,9 @@ from django.shortcuts import render
 def act_view(request):
     return render(request, 'act.html')
 
+def access_view(request):
+    return render (request,'access.html')
+
 def benefits_view(request):
     return render(request, 'benefits.html')
 
@@ -123,7 +126,7 @@ def message (request):
     name = request.POST.get('name',False)
     message = request.POST.get('message',False)
     sender=settings.EMAIL_HOST_USER
-    recipients = ['wilsonmwaura697@gmail.com']
+    recipients = ['info@privatisation.go.ke']
     subject="your have a message from "  + name
     print(subject)
     message=f'{phone}\nMessage: {message}'

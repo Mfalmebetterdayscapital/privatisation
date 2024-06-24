@@ -30,6 +30,7 @@ ALLOWED_HOSTS = ['privatisation-production.up.railway.app','kenyathena.up.railwa
 CSRF_TRUSTED_ORIGINS=['https://privatisation-production.up.railway.app','https://kenyathena.up.railway.app','https://127.0.0.1']
 
 
+DEBUG=True
 # Application definition
 
 INSTALLED_APPS = [
@@ -84,7 +85,7 @@ DATABASES = {
         
     }
 }
-DATABASE_URL = "postgresql://postgres:ZxlxbYLJowJIwslZqwOZqQHAUrltCeqq@monorail.proxy.rlwy.net:21824/railway"
+DATABASE_URL = "postgresql://postgres:wtolORRDuhvQuvONoJFaIAHXrczKJazA@monorail.proxy.rlwy.net:40635/railway"
 
 import dj_database_url
 DATABASES['default'] = dj_database_url.parse(DATABASE_URL, conn_max_age=1800)
@@ -141,11 +142,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'mail.mofreyfx.com'
+EMAIL_HOST = 'mail.privatisation.go.ke'
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 EMAIL_PORT = 465
-EMAIL_HOST_USER = 'mentorship@mofreyfx.com'
-EMAIL_HOST_PASSWORD = 'Admin@1993men'
+EMAIL_HOST_USER = 'info@privatisation.go.ke'
+EMAIL_HOST_PASSWORD = 'Change_Me@2023'
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

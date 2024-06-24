@@ -3,6 +3,7 @@ from.import views
 
 urlpatterns = [
     path('act/', views.act_view, name='act'),
+    path('access/', views.access_view, name='access'),
     path('benefits/', views.benefits_view, name='benefits'),
     path('board/', views.board_view, name='board'),
     path('business/', views.business_view, name='business'),

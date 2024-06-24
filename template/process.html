@@ -31,116 +31,117 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow sticky-top" style="height: 85px;">
-    <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center" href="{% url 'index' %}">
-            <img src="{% static 'img/PA logo.png' %}" alt="Privatisation Authority Logo" class="logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'index' %}" style="color: #000000;">HOME</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="whoWeAreDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
-                        WHO WE ARE <i class="fas fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="whoWeAreDropdown">
-                        <li><a class="dropdown-item" href="{% url 'mandate' %}">Mandate</a></li>
-                        <li><a class="dropdown-item" href="{% url 'board' %}">Board Management</a></li>
-                        <li><a class="dropdown-item" href="{% url 'management' %}">Management Team</a></li>
-                        <li class="dropdown-submenu">
-                            <a class="dropdown-item dropdown-toggle" href="#" id="galleryDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Service Charter
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="galleryDropdown">
-                                <li><a class="dropdown-item" href="https://docs.google.com/document/d/1IYKCfYpKjZcjw05VRfSLD40UcgvbPj0m/edit?usp=sharing&ouid=106924956695957088139&rtpof=true&sd=true">Swahili Version</a></li>
-                                <li><a class="dropdown-item" href="https://docs.google.com/document/d/1GwNPc0jufACj_q53i6PoSyVdN-hsRsqU/edit?usp=sharing&ouid=106924956695957088139&rtpof=true&sd=true">English Version</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="dropdown-item" href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/PRIVATIZATION-COMMISSION-STRATEGIC-PLAN-2022.2027-1-1.pdf" target="_blank">Strategic Plan</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="privatisationDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
-                        PRIVATISATION <i class="fas fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="privatisationDropdown">
-                        <li><a class="dropdown-item" href="{% url 'success' %}">Success Stories</a></li>
-                        <li><a class="dropdown-item" href="{% url 'privatisation' %}">Privatisation Programme</a></li>
-                        <li><a class="dropdown-item" href="{% url 'entreprise' %}">Public Enterprises Reform</a></li>
-                        <li><a class="dropdown-item" href="{% url 'completed' %}">Completed Privatisations</a></li>
-                        <li><a class="dropdown-item" href="{% url 'act' %}">Privatisation Act</a></li>
-                        <li><a class="dropdown-item" href="{% url 'process' %}">Privatisation Process</a></li>
-                        <li><a class="dropdown-item" href="{% url 'benefits' %}">Benefits Of Privatisation</a></li>
-                        <li><a class="dropdown-item" href="{% url 'status' %}">Privatisation Programme Status</a></li>
-                        <li><a class="dropdown-item" href="{% url 'research' %}">Research</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="opportunitiesDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
-                        OPPORTUNITIES <i class="fas fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="opportunitiesDropdown">
-                        <li class="dropdown-submenu">
-                            <a class="dropdown-item dropdown-toggle" href="#" id="tendersDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Careers
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="tendersDropdown">
-                                <li><a class="dropdown-item" href="{% url 'vacancies' %}">Vacancies</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown-submenu">
-                            <a class="dropdown-item dropdown-toggle" href="#" id="tendersDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Tenders
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="tendersDropdown">
-                                <li><a class="dropdown-item" href="{% url 'tenders' %}">Tenders</a></li>
-                                <li><a class="dropdown-item" href="{% url 'portal' %}">E-Procurement Portal</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown-submenu">
-                            <a class="dropdown-item dropdown-toggle" href="#" id="tendersDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Investments
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="tendersDropdown">
-                                <li><a class="dropdown-item" href="{% url 'tenders' %}">Transactions Teaser</a></li>
-                                <li><a class="dropdown-item" href="{% url 'expressions' %}">Expressions Of interest (EOI)</a></li>
-                                <li><a class="dropdown-item" href="{% url 'proposal' %}">Request For Proposal (RFP)</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="informationCentreDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
-                        INFORMATION CENTRE <i class="fas fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="informationCentreDropdown">
-                        <li><a class="dropdown-item" href="{% url 'news' %}">Our News</a></li>
-                        <li><a class="dropdown-item" href="{% url 'login' %}">Access To Information Center</a></li>
-                        <li><a class="dropdown-item" href="{% url 'act' %}">Privatisation Act</a></li>
-                        <li><a class="dropdown-item" href="{% url 'policy' %}">Anti-Corruption Policy</a></li>
-                        <li><a class="dropdown-item" href="{% url 'business' %}">Business Continuity Policy</a></li>
-                        <li><a class="dropdown-item" href="{% url 'mechanism' %}">Complaints Handling Mechanism</a></li>
-                        <li><a class="dropdown-item" href="https://docs.google.com/document/d/1vMwiEhgPHBaZu8J2Mzeg4jMDqFnBpUvc/edit?usp=sharing&ouid=106924956695957088139&rtpof=true&sd=true">Quality Policy</a></li>
-                        <li><a class="dropdown-item" href="{% url 'csr' %}">Corporate Social Responsibility Policy</a></li>
-                        <li><a class="dropdown-item" href="{% url 'research' %}">Research</a></li>
-                        <li><a class="dropdown-item" href="{% url 'images' %}">Gallery</a></li>
-                        <li><a class="dropdown-item" href="{% url 'videos' %}">Videos</a></li>
-                        <li><a class="dropdown-item" href="{% url 'downloads' %}">Downloads</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'contact' %}" style="color: #000000;">CONTACT US</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow sticky-top" style="height: 85px;">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="{% url 'index' %}">
+                <img src="{% static 'img/PA logo.png' %}" alt="Privatisation Authority Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}" style="color: #000000;">HOME</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="whoWeAreDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
+                            WHO WE ARE <i class="fas fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="whoWeAreDropdown">
+                            <li><a class="dropdown-item" href="{% url 'mandate' %}">Mandate</a></li>
+                            <li><a class="dropdown-item" href="{% url 'board' %}">Board Management</a></li>
+                            <li><a class="dropdown-item" href="{% url 'management' %}">Management Team</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="galleryDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Service Charter
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="galleryDropdown">
+                                    <li><a class="dropdown-item" href="https://drive.google.com/file/d/1UZEXSDo6qIpq107EMA13ZGbo5NZDMzM6/view?usp=sharing">Swahili Version</a></li>
+                                    <li><a class="dropdown-item" href="https://drive.google.com/file/d/11pa5mmVY3QxOHb7QF7WECbN4dZg99C7b/view?usp=sharing">English Version</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="https://drive.google.com/file/d/1ZmAGJW4g8XpFybsygnsaATNTcdMAcguc/view?usp=sharing" target="_blank">Strategic Plan</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="privatisationDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
+                            PRIVATISATION <i class="fas fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="privatisationDropdown">
+                            <li><a class="dropdown-item" href="{% url 'success' %}">Success Stories</a></li>
+                            <li><a class="dropdown-item" href="{% url 'privatisation' %}">Privatisation Programme</a></li>
+                            <li><a class="dropdown-item" href="{% url 'entreprise' %}">Public Enterprises Reform</a></li>
+                            <li><a class="dropdown-item" href="{% url 'completed' %}">Completed Privatisations</a></li>
+                            <li><a class="dropdown-item" href="{% url 'act' %}">Privatisation Act</a></li>
+                            <li><a class="dropdown-item" href="{% url 'process' %}">Privatisation Process</a></li>
+                            <li><a class="dropdown-item" href="{% url 'benefits' %}">Benefits Of Privatisation</a></li>
+                            <li><a class="dropdown-item" href="{% url 'status' %}">Privatisation Programme Status</a></li>
+                            <li><a class="dropdown-item" href="{% url 'research' %}">Research</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="opportunitiesDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
+                            OPPORTUNITIES <i class="fas fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="opportunitiesDropdown">
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="tendersDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Careers
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="tendersDropdown">
+                                    <li><a class="dropdown-item" href="{% url 'vacancies' %}">Vacancies</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="tendersDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Tenders
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="tendersDropdown">
+                                    <li><a class="dropdown-item" href="{% url 'tenders' %}">Tenders</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'portal' %}">E-Procurement Portal</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="tendersDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Investments
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="tendersDropdown">
+                                    <li><a class="dropdown-item" href="{% url 'tenders' %}">Transactions Teaser</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'expressions' %}">Expressions Of interest (EOI)</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'proposal' %}">Request For Proposal (RFP)</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="informationCentreDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">
+                            INFORMATION CENTRE <i class="fas fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="informationCentreDropdown">
+                            <li><a class="dropdown-item" href="{% url 'news' %}">Our News</a></li>
+                            <li><a class="dropdown-item" href="{% url 'access' %}">Access To Information Center</a></li>
+
+                            <li><a class="dropdown-item" href="{% url 'act' %}">Privatisation Act</a></li>
+                            <li><a class="dropdown-item" href="{% url 'policy' %}">Anti-Corruption Policy</a></li>
+                            <li><a class="dropdown-item" href="{% url 'business' %}">Business Continuity Policy</a></li>
+                            <li><a class="dropdown-item" href="{% url 'mechanism' %}">Complaints Handling Mechanism</a></li>
+                            <li><a class="dropdown-item" href="https://drive.google.com/file/d/1lMrxxZeR7ulk0lIhAAkKeH5G_8BDEdNh/view?usp=sharing">Quality Policy</a></li>
+                            <li><a class="dropdown-item" href="{% url 'csr' %}">Corporate Social Responsibility Policy</a></li>
+                            <li><a class="dropdown-item" href="{% url 'research' %}">Research</a></li>
+                            <li><a class="dropdown-item" href="{% url 'images' %}">Gallery</a></li>
+                            <li><a class="dropdown-item" href="{% url 'videos' %}">Videos</a></li>
+                            <li><a class="dropdown-item" href="{% url 'downloads' %}">Downloads</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}" style="color: #000000;">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
 <style>
     /* Custom dropdown submenu styling */
@@ -344,115 +345,89 @@
 </style>
 </head>
 <body>
-
+    <style>
+        .container1 {
+            width: 80%; /* Adjust the width as needed */
+            margin: 50px auto; /* Center the container */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+            overflow: hidden; /* Prevents shadow from overflowing */
+            color: #000000;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    
+        .title {
+            text-align: center;
+            text-decoration: underline;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    
+        .process-step {
+            margin-bottom: 20px;
+        }
+    
+        .step-number {
+            font-weight: bold;
+        }
+    
+        .step-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    
+        .step-description {
+            text-align: justify;
+        }
+    </style>
+    </head>
+    <body>
+    
     <div class="container1">
         <h2 class="title">PRIVATISATION PROCESS</h2>
-        <table>
-            <tr>
-                <th>Step</th>
-                <th></th> <!-- This column is for numbering -->
-                <th>Description</th>
-            </tr>
-            <tr>
-                <td>1.</td>
-                <td style="font-weight:bold ;">APPROVAL OF THE PRIVATISATION PROGRAMME</td>
-                <td>Approval of the Programme which is a list of the public sector investments and operations approved by the Cabinet to be considered for privatisation and subsequently privatised once all required approvals are granted. To prepare the programme, the Commission reviews the assets and operations of public sector investments and operations and proposes a programme which it submits to the Government for approval by the Cabinet. A sector ministry may also propose that an institution under the sector be included in the programme. Once approved, the programme is gazetted by the Minister responsible for Finance.</td>
-            </tr>
-            <tr>
-                <td>2.</td>
-                <td style="font-weight:bold ;">PREPARATION OF DETAILED PRIVATISATION PROPOSAL BY THE COMMISSION</td>
-                <td>For every investment and operation in the approved Privatisation Programme, the Commission is required to prepare a detailed privatisation proposal for approval by the Cabinet. Each detailed proposal should set out the purpose of the establishment and existence of the asset or operation; the extent to which the purpose has been met including inadequacies in meeting that purpose; the rights or other entitlements and resources that have been provided to meet the purpose; recommendations for continuing to meet the purpose; if the asset is a state corporation – its financial position; the recommended method of privatisation; the cost of implementing the proposed privatisation; recommendations for dealing with the employees directly affected by the proposed privatisation, including any benefits they might be owed; the benefits to be gained from the proposed privatisation; a work plan for the proposed privatisation; information regarding any written law, the repeal, amendment or enactment of which will be necessary for the proposed privatisation to be carried out; and proposals on how Kenyans are to be encouraged to participate in the Transaction. As the Commission has adopted a lean institutional structure, to enable it to address the above issues adequately, it procures the services of transaction advisors who assist it to carry out detailed financial, legal and technical due diligence and comprehensive assessment of the needs both of the investment and the sector.</td>
-            </tr>
-            <tr>
-                <td>3.</td>
-                <td style="font-weight:bold ;">APPROVAL OF DETAILED PRIVATISATION PROPOSAL</td>
-                <td>Consideration and approval of the detailed privatisation proposal by the Cabinet.</td>
-            </tr>
-            <tr>
-                <td>4.</td>
-                <td style="font-weight:bold ;">PRESENTATION TO THE FINANCE, PLANNING AND TRADE COMMITTEE OF PARLIAMENT</td>
-                <td>Presentation of the approved detailed privatisation proposal to the relevant Committee of Parliament by the Cabinet Secretary responsible for Finance.</td>
-            </tr>
-            <tr>
-                <td>5.</td>
-                <td style="font-weight:bold ;">TRANSACTION IMPLEMENTATION</td>
-                <td></td>
-            </tr>
-        </table>
+        
+        <div class="process-step">
+            <div class="step-number">Step 1:</div>
+            <div class="step-title">Identification and Inclusion in Privatisation Programme</div>
+            <div class="step-description">
+                The programme shall specify public entities identified to be included in the Privatisation Programme.
+            </div>
+        </div>
+        
+        <div class="process-step">
+            <div class="step-number">Step 2:</div>
+            <div class="step-title">Consultation</div>
+            <div class="step-description">
+                The Cabinet Secretary shall make appropriate consultation with persons likely to be affected by privatisation of the public entity.
+            </div>
+        </div>
+        
+        <div class="process-step">
+            <div class="step-number">Step 3:</div>
+            <div class="step-title">Submission to Cabinet</div>
+            <div class="step-description">
+                After the consultations/public participation, the Cabinet Secretary shall forward the proposed Privatisation Programme to the Cabinet for approval.
+            </div>
+        </div>
+        
+        <div class="process-step">
+            <div class="step-number">Step 4:</div>
+            <div class="step-title">Ratification by National Assembly</div>
+            <div class="step-description">
+                Upon approval by the Cabinet, the Cabinet Secretary shall submit the approved Privatisation Programme to the National Assembly for ratification.
+            </div>
+        </div>
+        
+        <div class="process-step">
+            <div class="step-number">Step 5:</div>
+            <div class="step-title">Publication</div>
+            <div class="step-description">
+                Once ratified, the Privatisation Programme shall be published in the Kenya Gazette.
+            </div>
+        </div>
     </div>
-
-<style>
-    .service-section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: white;
-        padding: 20px;
-        width: 100%;
-        height: 80vh; /* Adjust height for larger screens */
-    }
-    
-    .service-image {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .view-profile-btn {
-        background-color: #E42130;
-        color: #ffffff;
-        border: none;
-        padding: 2.5px 5px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    
-    @media (max-width: 576px) {
-        .service-section {
-            height: 60vh; /* Adjust height for smaller screens */
-        }
-    }
-
-     /* Popup Styles */
-     .popup {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 110%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 9999;
-    }
-
-    .popup-content {
-        background-color: #ffffff;
-        max-width: 1300px;
-        margin: 100px auto;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        position: relative;
-    }
-
-    .close-btn {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        cursor: pointer;
-        color: #777;
-        font-size: 20px;
-        transition: color 0.3s;
-    }
-
-    .close-btn:hover {
-        color: #333;
-    }
-</style>
-
-<!-- Service Section Start -->
-<div class="service-section">
-    <img src="img/privatasion-process.jpg" alt="Our Services" class="service-image">
-</div>
 <!-- Service Section End -->
 
 <!-- Footer Start -->
@@ -466,7 +441,7 @@
                     <p><i class="fa fa-phone-alt"></i>020 8696 800</p>
                     <p><i class="fa fa-envelope"></i>info@privatisation.go.ke</p>
                     <div class="footer-social">
-                        <a href="https://x.com/privatizationke?lang=en"><i class="fab fa-twitter"></i></a>
+                        <a href="https://x.com/PrivatisationKE"><i class="fab fa-twitter"></i></a>
                         <a href="https://web.facebook.com/privatisationauthority"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/privatisationauthority/"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.linkedin.com/company/privatizationke/?originalSubdomain=ke"><i class="fab fa-linkedin-in"></i></a>
@@ -486,10 +461,10 @@
             <div class="col-md-6 col-lg-3">
                 <div class="footer-link">
                     <h2>Useful Pages</h2>
-                    <a href="mandate.html">About Us</a>
-                    <a href="contact.html">Contact Us</a>
-                    <a href="board.html">Our Team</a>
-                    <a href="success.html">Projects</a>
+                    <a href="/mandate">About Us</a>
+                    <a href="/contact">Contact Us</a>
+                    <a href="/board">Our Team</a>
+                    <a href="/success">Projects</a>
                    
                 </div>
             </div>
@@ -499,25 +474,13 @@
                     <p>
                         Stay updated with the latest news and developments from the Privatisation Authority. Subscribe to our newsletter.
                     </p>
-                    <div class="form">
-                        <input class="form-control" placeholder="Email here">
-                        <button class="btn">Submit</button>
-                    </div>
+                    
                 </div>
             </div>
         </div>
     </div>
-    <div class="container footer-menu">
-        <div class="f-menu">
-            <a href="">Terms of Use</a>
-            <a href="">Privacy Policy</a>
-            <a href="">Cookies</a>
-            <a href="">Help</a>
-            <a href="">FAQs</a>
-        </div>
-    </div>
+    
 </div>
-<!-- Footer End -->
 
             <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
         </div>

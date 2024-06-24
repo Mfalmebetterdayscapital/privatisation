@@ -1,4 +1,4 @@
-{% load static %}
+{% load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,26 +8,26 @@
     <meta content="Construction Company Website Template" name="keywords">
     <meta content="Construction Company Website Template" name="description">
 
-    <!-- Favicon -->
-    <link href="{% static 'img/icon.png' %}" rel="icon">
+     <!-- Favicon -->
+     <link href="{% static 'img/icon.png' %}" rel="icon">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- CSS Libraries -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="{% static 'lib/flaticon/font/flaticon.css' %}" rel="stylesheet">
-    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
-    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
-    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
-    <link href="{% static 'lib/slick/slick.css' %}" rel="stylesheet">
-    <link href="{% static 'lib/slick/slick-theme.css' %}" rel="stylesheet">
-
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+     <!-- Google Font -->
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+     <!-- Bootstrap CSS -->
+     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+ 
+     <!-- CSS Libraries -->
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+     <link href="{% static 'lib/flaticon/font/flaticon.css' %}" rel="stylesheet">
+     <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+     <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+     <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+     <link href="{% static 'lib/slick/slick.css' %}" rel="stylesheet">
+     <link href="{% static 'lib/slick/slick-theme.css' %}" rel="stylesheet">
+ 
+     <link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
 
 <body>
@@ -78,7 +78,7 @@
                             <li><a class="dropdown-item" href="{% url 'process' %}">Privatisation Process</a></li>
                             <li><a class="dropdown-item" href="{% url 'benefits' %}">Benefits Of Privatisation</a></li>
                             <li><a class="dropdown-item" href="{% url 'status' %}">Privatisation Programme Status</a></li>
-                            <li><a class="dropdown-item" href="{% url 'research' %}">Research</a></li>
+                          
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -122,7 +122,7 @@
                         <ul class="dropdown-menu" aria-labelledby="informationCentreDropdown">
                             <li><a class="dropdown-item" href="{% url 'news' %}">Our News</a></li>
                             <li><a class="dropdown-item" href="{% url 'access' %}">Access To Information Center</a></li>
-                           
+
                             <li><a class="dropdown-item" href="{% url 'act' %}">Privatisation Act</a></li>
                             <li><a class="dropdown-item" href="{% url 'policy' %}">Anti-Corruption Policy</a></li>
                             <li><a class="dropdown-item" href="{% url 'business' %}">Business Continuity Policy</a></li>
@@ -142,18 +142,11 @@
             </div>
         </div>
     </nav>
-
 <style>
     /* Custom dropdown submenu styling */
     .dropdown-submenu {
         position: relative;
         
-    }
-
-    .downloadz {
-        width: 900px; /* Adjust width as needed */
-        margin: 0 auto; /* This centers the section horizontally */
-        text-align: center; /* Optional: Center-align text inside the section */
     }
 
     .dropdown-submenu .dropdown-menu {
@@ -310,252 +303,210 @@
 
 <!-- Make sure to include Font Awesome for the dropdown icons -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
+        
+        
 <style>
-    .section-title {
-        cursor: pointer;
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #dddddd;
+        
+    }
+    .container1 {
+        max-width: 800px;
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        box-sizing: border-box;
+        margin: 0 auto; /* Center horizontally */
+        
+    }
+    .header-title {
+        text-align: center;
+        color: #000000;
+        font-size: 24px;
+        margin-bottom: 20px;
+        
+    }
+    .title {
+        color: #000000;
+        font-size: 20px;
+        margin-bottom: 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px;
-        border: 1px solid #ccc;
-        margin-bottom: 5px;
-
+        cursor: pointer;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: #f1f1f1;
     }
-
-    .section-content {
+    .dropdown-icon {
+        font-size: 18px;
+        color: #d71920;
+    }
+    .dropdown-content {
         display: none;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-top: none;
+        padding: 15px;
+        margin-top: 10px;
     }
-
-    .icon {
-        font-size: 20px;
+    .dropdown-content a {
+        display: block;
+        color: #000000;
+        text-decoration: none;
+        margin-bottom: 5px;
     }
-
-    .icon.expand::before {
-        content: '+';
+    .dropdown-content a:hover {
+        text-decoration: underline;
     }
-
-    .icon.collapse::before {
-        content: '-';
+    .active .dropdown-content {
+        display: block;
     }
-
-    
 </style>
+
+
+
+<div class="container1" style="margin-top: 40px;">
+    <div class="header-title">ACCESS TO INFORMATION</div>
+    
+    <div class="title" onclick="toggleDropdown(this)">
+        <span>ACCESS TO INFORMATION</span>
+        <span class="dropdown-icon">+</span>
+    </div>
+    <div class="dropdown-content">
+        <a href="https://ss.privatisation.go.ke/site/login" target="_blank">Staff Self-Service</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/Access-to-Information-ActNo31of2016.pdf" target="_blank">Access to Information Act No31 of 2016</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/Access-to-Information-Officers-1.pdf" target="_blank">Access to Information Officers</a>
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/Salary-Scales-of-PC-Employees-by-Grade.pdf" target="_blank">Salary Scales of PC Employees by Grade</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/Organisational-Structure.pdf" target="_blank">Organisational Structure</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/DECISION-MAKING-PROCEDURE-AND-CHANNELS-OF-SUPERVISION.pdf" target="_blank">Decision Making Procedure And Channels Of Supervision</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/PRIVATIZATION-COMMISSION-FUNCTION-AND-ORGANIZATION.pdf" target="_blank">Privatisation Authority Function and Organization</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/PC-ATI-Procedure_Website.pdf" target="_blank">PC ATI Procedure</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/Privatization-Commission-Budget-2019_2020.pdf" target="_blank">Privatisation Authority Budget 2019-2020</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/PC-Access-to-Information-Form.pdf" target="_blank">PC Access to Information Form</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/ADDITIONAL-LIST-OF-REGISTERD-SUPPLIERS-NOVEMBER-2020-UPDATE-converted.pdf" target="_blank">ADDITIONAL LIST OF REGISTERED SUPPLIERS-NOVEMBER 2020 UPDATE</a>
+    </div>
+
+    <div class="title" onclick="toggleDropdown(this)">
+        <span>Policies</span>
+        <span class="dropdown-icon">+</span>
+    </div>
+    <div class="dropdown-content">
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/Leadership-and-Integrity-Code.pdf" target="_blank">Leadership and Integrity Code</a>
+        <a href="Protection of Whistle-Blowers Policy" target="_blank">Protection of Whistle-Blowers Policy</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/Conflict-of-Interest-Policy.pdf" target="_blank">Conflict of Interest Policy</a>
+    </div>
+
+    <div class="title" onclick="toggleDropdown(this)">
+        <span>Procurement Reports</span>
+        <span class="dropdown-icon">+</span>
+    </div>
+    <div class="dropdown-content">
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/FINAL-LIST-OF-REGISTERED-SUPPLIERS-FOR-THE-FINANCIAL-YEARS-2023-2024-AND-2024-2025.pdf" target="_blank">FINAL LIST OF REGISTERED SUPPLIERS FOR THE FINANCIAL YEARS 2023-2024 AND 2024-2025</a>
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/NOTIFICATION-OF-REGISTRATION-OF-SUPPLIERS-FOR-THE-FINANCIAL-YEARS-2023-2024-2024-2025.pdff" target="_blank">NOTIFICATION OF REGISTRATION OF SUPPLIERS FOR THE FINANCIAL YEARS 2023 – 2024 & 2024 – 2025</a>
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/CONTRACTS-STATUS-REPORT-AS-AT-31.12.2023-Q2-FY-2023-2024.pdf" target="_blank">CONTRACTS STATUS REPORT AS AT 31.12.2023 (Q2 FY 2023-2024)</a>
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/CONTRACTS-STATUS-REPORT-AS-AT-21.03.2024-Q3FY-2023-2024-21.03.2024.pdf" target="_blank">CONTRACTS STATUS REPORT AS AT 21.03.2024 (Q3FY 2023-2024) 21.03.2024</a>
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/PROCUREMENT-CONTRACTS-AWARDS-Q2-2023-2024.pdf" target="_blank">PROCUREMENT CONTRACTS AWARDS Q2 2023 – 20242</a>
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/PROCUREMENT-CONTRACTS-AWARDS-Q3-2023-2024-09.01.2024.pdf" target="_blank">PROCUREMENT CONTRACTS AWARDS Q3 2023 – 2024 09.01.2024</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/CONTRACTS-STATUS-AS-AT-30.06.2021.pdf" target="_blank">CONTRACTS STATUS AS AT 30.06.2021</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/CONTRACTS-STATUS-AS-AT-30.09.2020.pdf" target="_blank">CONTRACTS STATUS AS AT 30.09.2020</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/CONTRACTS-STATUS-AS-AT-30.06.2022.pdf" target="_blank">CONTRACTS STATUS AS AT 30.06.2022</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/CONTRACTS-STATUS-AS-AT-30.09.2021.pdf" target="_blank">CONTRACTS STATUS AS AT 30.09.2021</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/CONTRACTS-STATUS-AS-AT-31.03.2022-1.pdf">CONTRACTS STATUS AS AT 31.03.2022 (1)</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/CONTRACTS-STATUS-AS-AT-31.03.2021.pdf">CONTRACTS STATUS AS AT 31.03.2021</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/CONTRACTS-STATUS-AS-AT-31.12.2020_0.pdf">CONTRACTS STATUS AS AT 31.12.2020_0</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/CONTRACTS-STATUS-AS-AT-30062020_0.pdf">CONTRACTS STATUS AS AT 30062020_0</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/CONTRACTS-STATUS-REPORT-AS-AT-30.06.2023-Q4-FY-2022-2023-10.07.2023-1.pdf">CONTRACTS STATUS REPORT AS AT 30.06.2023 (Q4 FY 2022-2023) 10.07.2023 (1)</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/NOTIFICATION-OF-REGISTRATION-OF-SUPPLIERS-FOR-THE-PERIOD-2021-2023-O2.12.2021.pdf">NOTIFICATION OF REGISTRATION OF SUPPLIERS FOR THE PERIOD 2021 – 2023 O2.12.2021</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/PROCUREMENT-AWARDS-REPORT-FOR-Q1-2021-2022-15.10.2021.pdf">PROCUREMENT AWARDS REPORT FOR Q1 2021 – 2022 15.10.2021</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/PROCUREMENT-AWARDS-FOR-THE-PERIOD-1ST-JULY-30TH-SEPTEMBER-2022.pdf">PROCUREMENT AWARDS FOR THE PERIOD 1ST JULY – 30TH SEPTEMBER 2022</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/PROCUREMENT-AWARDS-FOR-THE-PERIOD-1ST-APRIL-2022-30TH-JUNE-2022-Q4.pdf">PROCUREMENT AWARDS FOR THE PERIOD 1ST APRIL 2022 – 30TH JUNE 2022 (Q4)</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/PROCUREMENT-AWARDS-REPORT-FOR-Q2-2021-2022-14.01.2022.pdf">PROCUREMENT AWARDS REPORT FOR Q2 2021 – 2022 14.01.2022</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/Q3-2021-2022-FY-PROCUREMENT-PLAN-IMPLEMENTATION-REPORT-MARCH-2021-for-uploading.pdf">PROCUREMENT PLAN IMPLEMENTATION REPORT 31.12.2022Q3 2021-2022 FY</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/Q4-2022-2023-FY-PROCUREMENT-PLAN-IMPLEMENTATION-REPORT-30.06.2023.pdf">PROCUREMENT PLAN IMPLEMENTATION REPORT MARCH 2021 – for uploadingQ3 2022-2023 FY</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/Q3-2021-2022-FY-PROCUREMENT-PLAN-IMPLEMENTATION-REPORT-MARCH-2021-for-uploading.pdf">PROCUREMENT PLAN IMPLEMENTATION REPORT 31.12.2022 (1)Q4 2022-2023 FY</a>
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/Q4-2022-2023-FY-PROCUREMENT-PLAN-IMPLEMENTATION-REPORT-30.06.2023.pdf">Q4 2022-2023 FY PROCUREMENT PLAN IMPLEMENTATION REPORT 30.06.2023</a>
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/CONTRACTS-AWARDED-IN-Q1-2020-2021-15.10.2020.pdf">CONTRACTS AWARDED IN Q1 2020 – 2021 15.10.2020</a>
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/Contract-Progress-Report-as-at-30-06-2019-4th-Qtr-Report-2018-2019.pdf">Contract Progress Report as at 30-06-2019 – 4th Qtr Report 2018 – 2019</a>
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/Contract-Progress-Report-as-at-30.09-2019-1st-Quarter-Report-2019-2020.pdf">Contract Progress Report as at 30.09-2019 – 1st Quarter Report 2019-2020</a>
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/CONTRACTS-AWARDED-IN-Q2-2020-2021-22.01.2021.pdf">CONTRACTS AWARDED IN Q2 2020 – 2021 22.01.2021</a>
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/CONTRACTS-AWARDED-IN-Q3-2020-2021.pdf">CONTRACTS AWARDED IN Q3 2020 – 2021</a>
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/CONTRACTS-AWARDED-IN-Q4-2020-2021-FINANCIAL-YEAR.pdf">CONTRACTS AWARDED IN Q4 2020-2021 FINANCIAL YEAR</a>
+</div>
+
 <script>
-    function toggleSection(event) {
-        const content = event.currentTarget.nextElementSibling;
-        const icon = event.currentTarget.querySelector('.icon');
-        if (content.style.display === "none" || content.style.display === "") {
-            content.style.display = "block";
-            icon.classList.remove('expand');
-            icon.classList.add('collapse');
+    function toggleDropdown(element) {
+        const dropdownContent = element.nextElementSibling;
+        const icon = element.querySelector('.dropdown-icon');
+        if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+            icon.textContent = "+";
         } else {
-            content.style.display = "none";
-            icon.classList.remove('collapse');
-            icon.classList.add('expand');
+            dropdownContent.style.display = "block";
+            icon.textContent = "-";
         }
     }
 </script>
-</head>
-<body>
-    <style>
-        .download-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            background-color: #ffffff;
-            margin: 20px auto;
-            max-width: 800px;
-            width: 100%;
-        }
-    
-        .section-row {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            box-sizing: border-box;
-        }
-    
-        .section-title {
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            border: 1px solid #ccc;
-            background-color: #000000;
-            color: #ffffff;
-            border-radius: 5px;
-            margin-bottom: 5px;
-            flex: 1;
-            margin-right: 5px;
-        }
-    
-        .section-title:last-child {
-            margin-right: 0;
-        }
-    
-        .section-content {
-            display: none;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-top: none;
-            color: #000000;
-            background-color: #ffffff;
-            border-radius: 0 0 5px 5px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-    
-        .icon {
-            font-size: 20px;
-        }
-    
-        .icon.expand::before {
-            content: '+';
-        }
-    
-        .icon.collapse::before {
-            content: '-';
-        }
-    
-        .download-container h1 {
-            text-decoration: underline;
-            text-align: center;
-        }
-    
-        .download-container a {
-            color: #000000;
-            text-decoration: none;
-        }
-    
-        .download-container a:hover {
-            text-decoration: underline;
-        }
-    
-        @media (max-width: 800px) {
-            .section-row {
-                flex-direction: column;
-            }
-    
-            .section-title {
-                margin-right: 0;
-                margin-bottom: 10px;
-            }
-        }
-    </style>
-    
-    <script>
-        function toggleSection(event) {
-            const content = event.currentTarget.nextElementSibling;
-            const icon = event.currentTarget.querySelector('.icon');
-            if (content.style.display === "none" || content.style.display === "") {
-                content.style.display = "block";
-                icon.classList.remove('expand');
-                icon.classList.add('collapse');
-            } else {
-                content.style.display = "none";
-                icon.classList.remove('collapse');
-                icon.classList.add('expand');
-            }
-        }
-    </script>
-    
-    <section class="downloadz">
-        <div class="download-container">
-            <h1>DOWNLOADS</h1>
-            <div class="section-row">
-                <div class="section">
-                    <div class="section-title" onclick="toggleSection(event)">
-                        MD's Notes
-                        <span class="icon expand"></span>
-                    </div>
-                    <div class="section-content">
-                        <a href="https://drive.google.com/file/d/1DEudaiU7JX5i-RRjdXHIragCqfhFdDle/view?usp=sharing">Click To View Notes</a>
-                    </div>
-                </div>
-                <div class="section">
-                    <div class="section-title" onclick="toggleSection(event)">
-                        Chairman's Notes
-                        <span class="icon expand"></span>
-                    </div>
-                    <div class="section-content">
-                        <a href="https://drive.google.com/file/d/1qZpVTphzhgoQVAsk6idrrA99mLaVO20I/view?usp=sharing">Click To View Notes</a>
-                    </div>
-                </div>
-                <div class="section">
-                    <div class="section-title" onclick="toggleSection(event)">
-                        Press Release
-                        <span class="icon expand"></span>
-                    </div>
-                    <div class="section-content">
-                        <a href="https://drive.google.com/file/d/1VVeLJrTAJ35tCPSKtmSSwyHTkpS8CVvZ/view?usp=sharing">Click To View Notes</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+</div>
+  
 
-    <div class="footer wow fadeIn" data-wow-delay="0.3s">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-3">
-                    <div class="footer-contact">
-                        <h2>Office Contact</h2>
-                        <p><i class="fa fa-map-marker-alt"></i>10th Floor Social Security House - Annex, Nairobi, Kenya</p>
-                        <p><i class="fa fa-phone-alt"></i>020 8696 800</p>
-                        <p><i class="fa fa-envelope"></i>info@privatisation.go.ke</p>
-                        <div class="footer-social">
-                            <a href="https://x.com/PrivatisationKE"><i class="fab fa-twitter"></i></a>
-                            <a href="https://web.facebook.com/privatisationauthority"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/privatisationauthority/"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.linkedin.com/company/privatizationke/?originalSubdomain=ke"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="footer-link">
-                        <h2>Service Areas</h2>
-                        <a href="">Privatisation Programs</a>
-                        <a href="">Consultation Services</a>
-                        <a href="">Project Management</a>
-                        <a href="">Policy Development</a>
-                        <a href="">Research and Analysis</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="footer-link">
-                        <h2>Useful Pages</h2>
-                        <a href="/mandate">About Us</a>
-                        <a href="/contact">Contact Us</a>
-                        <a href="/board">Our Team</a>
-                        <a href="/success">Projects</a>
-                       
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="newsletter">
-                        <h2>Newsletter</h2>
-                        <p>
-                            Stay updated with the latest news and developments from the Privatisation Authority. Subscribe to our newsletter.
-                        </p>
-                        
+
+
+<!-- Footer Start -->
+<div class="footer wow fadeIn" data-wow-delay="0.3s">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-3">
+                <div class="footer-contact">
+                    <h2>Office Contact</h2>
+                    <p><i class="fa fa-map-marker-alt"></i>10th Floor Social Security House - Annex, Nairobi, Kenya</p>
+                    <p><i class="fa fa-phone-alt"></i>020 8696 800</p>
+                    <p><i class="fa fa-envelope"></i>info@privatisation.go.ke</p>
+                    <div class="footer-social">
+                        <a href="https://x.com/PrivatisationKE"><i class="fab fa-twitter"></i></a>
+                        <a href="https://web.facebook.com/privatisationauthority"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/privatisationauthority/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/privatizationke/?originalSubdomain=ke"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="footer-link">
+                    <h2>Service Areas</h2>
+                    <a href="">Privatisation Programs</a>
+                    <a href="">Consultation Services</a>
+                    <a href="">Project Management</a>
+                    <a href="">Policy Development</a>
+                    <a href="">Research and Analysis</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="footer-link">
+                    <h2>Useful Pages</h2>
+                    <a href="/mandate">About Us</a>
+                    <a href="/contact">Contact Us</a>
+                    <a href="/board">Our Team</a>
+                    <a href="/success">Projects</a>
+                   
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="newsletter">
+                    <h2>Newsletter</h2>
+                    <p>
+                        Stay updated with the latest news and developments from the Privatisation Authority. Subscribe to our newsletter.
+                    </p>
+                    
+                </div>
+            </div>
         </div>
-        
     </div>
+    
+</div>
+<!-- Footer End -->
 
-</body>
+
+
+    </body>
 </html>
-
-
-
