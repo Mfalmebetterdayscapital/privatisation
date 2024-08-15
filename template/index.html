@@ -1030,11 +1030,11 @@
             <h2>Latest from Privatisation Authority</h2>
         </div>
         <div class="row">
+            <!-- First Row of 3 Activities -->
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                 <div class="blog-item">
                     <div class="blog-img">
                         <img src="{% static 'img/KHPL-EOI-Photo-360x230.png' %}" alt="Acquisition of Government Shareholding in Kenya Hotel Properties Limited">
-
                     </div>
                     <div class="blog-title">
                         <h3>
@@ -1043,7 +1043,7 @@
                         <a class="btn toggle-title" href="javascript:void(0)">+</a>
                     </div>
                     <div class="blog-text">
-                        <p style="color: #000000;">
+                        <p>
                             The Government of Kenya, through the Privatisation Authority, invites investors to acquire 33.83% of its shareholding in Kenya Hotel Properties Limited (KHPL) by 18th April 2024. Established in 1966, KHPL owns a prime property in Nairobi's Central Business District, previously managed by the Intercontinental Hotel Group, near the National Parliament building.
                         </p>
                     </div>
@@ -1052,8 +1052,8 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp">
                 <div class="blog-item">
                     <div class="blog-img">
-                        <img src="{% static 'img/Tree-Planting-Activity-pc-360x230.png' %}" alt="Tree Planting Activity">
-
+                        <img src="{% static 'img/Tree-Planting-Activity-pc-360x230.png' %}"
+                        alt="Tree Planting Activity">
                     </div>
                     <div class="blog-title">
                         <h3>
@@ -1062,7 +1062,7 @@
                         <a class="btn toggle-title" href="javascript:void(0)">+</a>
                     </div>
                     <div class="blog-text">
-                        <p style="color: #000000;">
+                        <p>
                             On November 13th, 2023, the Privatisation Authority planted 1,500 seedlings around the Nairobi sewage treatment plant in Ruai. Accompanied by Cabinet Secretary Prof. Njuguna Ndung’u, the Authority, led by Managing Director Mr. Joseph Koskey, also planted trees in Nyandarua. Since the last financial year, the Authority has planted 23,000 trees, including 17,800 seedlings donated during the Kaptagat Annual tree planting event.
                         </p>
                     </div>
@@ -1071,8 +1071,8 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                 <div class="blog-item">
                     <div class="blog-img">
-                        <img src="{% static 'img/Optimized-20230630_101319-360x230.jpg' %}" alt="Privatisation Authority Donates 17,800 Tree Seedlings">
-
+                        <img src="{% static 'img/Optimized-20230630_101319-360x230.jpg' %}"
+                        alt="Privatisation Authority Donates 17,800 Tree Seedlings">
                     </div>
                     <div class="blog-title">
                         <h3>
@@ -1081,8 +1081,30 @@
                         <a class="btn toggle-title" href="javascript:void(0)">+</a>
                     </div>
                     <div class="blog-text">
-                        <p style="color: #000000;">
+                        <p>
                             The Privatisation Authority donated 17,800 tree seedlings during the 7th Edition of the Kaptagat Annual tree planting event at Kessup Forest in Elgeyo Marakwet. Sourced from Kericho Medium Prison and Ngeria Prison in Eldoret, these seedlings were part of the Authority's CSR efforts. Represented by Board Chairman Mr. Faisal Abbas and Executive Director Mr. Joseph Koskey, the Authority helped plant 32,000 trees, supporting the Presidential directive to plant 15 billion trees by 2032.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Second Row of 1 Activity (starts from left) -->
+        <div class="row">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="blog-item">
+                    <div class="blog-img">
+                        <img src="{% static 'img/kwal.jpeg' %}"alt="Acquisition of Government Shareholding in KHAEL and KWAL">
+                    </div>
+                    <div class="blog-title">
+                        <h3>
+                            Acquisition of Government Shareholding <span class="more-text" style="display: none;">in KHAEL and KWAL</span>
+                        </h3>
+                        <a class="btn toggle-title" href="javascript:void(0)">+</a>
+                    </div>
+                    <div class="blog-text">
+                        <p>
+                            The Government of Kenya (GOK), through the Privatisation Authority, has invited prospective investors to submit bids for the acquisition of GOK shareholdings of KWAL Holdings (E.A) Limited (KHEAL) and Kenya Wine Agency Limited (KWAL) by 26th August 2024. GOK shareholdings of KHEAL and KWAL comprise 43.77% and 0.0000125% respectively.
                         </p>
                     </div>
                 </div>
@@ -1092,6 +1114,7 @@
 </div>
 <!-- Recent Activities End -->
 
+<!-- JavaScript Section -->
 <script>
 document.querySelectorAll('.toggle-title').forEach(btn => {
     btn.addEventListener('click', function() {
@@ -1102,14 +1125,20 @@ document.querySelectorAll('.toggle-title').forEach(btn => {
 });
 </script>
 
+<!-- CSS Section -->
 <style>
 .blog-title h3 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .more-text {
     white-space: normal;
+}
+
+.blog-item {
+    margin-bottom: 20px;
 }
 </style>
 
